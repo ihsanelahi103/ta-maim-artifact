@@ -1,0 +1,1 @@
+{"attack": "collusion", "frac": 0.2, "seed": 9, "f1": 0.975609756097561, "precision": 0.9523809523809523, "recall": 1.0, "fp": 1, "trust_sep": 0.304482023723597, "dp_eps": 0.3}

@@ -1,0 +1,137 @@
+{
+  "static": [
+    {
+      "sybil_pct": 10,
+      "attack": "static",
+      "f1_mean": 1.0,
+      "f1_std": 0.0,
+      "trust_sep": 0.9866,
+      "dp_epsilon": 0.3,
+      "avg_fp": 0.0,
+      "seed_results": [
+        {
+          "f1": 1.0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "fp": 0,
+          "trust_sep": 0.9865889030386433,
+          "dp_eps": 0.3
+        }
+      ]
+    },
+    {
+      "sybil_pct": 20,
+      "attack": "static",
+      "f1_mean": 0.9756,
+      "f1_std": 0.0,
+      "trust_sep": 0.9935,
+      "dp_epsilon": 0.3,
+      "avg_fp": 1.0,
+      "seed_results": [
+        {
+          "f1": 0.975609756097561,
+          "precision": 0.9523809523809523,
+          "recall": 1.0,
+          "fp": 1,
+          "trust_sep": 0.9934920300649231,
+          "dp_eps": 0.3
+        }
+      ]
+    },
+    {
+      "sybil_pct": 30,
+      "attack": "static",
+      "f1_mean": 1.0,
+      "f1_std": 0.0,
+      "trust_sep": 0.9946,
+      "dp_epsilon": 0.3,
+      "avg_fp": 0.0,
+      "seed_results": [
+        {
+          "f1": 1.0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "fp": 0,
+          "trust_sep": 0.99456877416088,
+          "dp_eps": 0.3
+        }
+      ]
+    },
+    {
+      "sybil_pct": 40,
+      "attack": "static",
+      "f1_mean": 1.0,
+      "f1_std": 0.0,
+      "trust_sep": 0.9841,
+      "dp_epsilon": 0.3,
+      "avg_fp": 0.0,
+      "seed_results": [
+        {
+          "f1": 1.0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "fp": 0,
+          "trust_sep": 0.9840788597098952,
+          "dp_eps": 0.3
+        }
+      ]
+    },
+    {
+      "sybil_pct": 50,
+      "attack": "static",
+      "f1_mean": 1.0,
+      "f1_std": 0.0,
+      "trust_sep": 0.9927,
+      "dp_epsilon": 0.3,
+      "avg_fp": 0.0,
+      "seed_results": [
+        {
+          "f1": 1.0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "fp": 0,
+          "trust_sep": 0.9926693830961786,
+          "dp_eps": 0.3
+        }
+      ]
+    },
+    {
+      "sybil_pct": 70,
+      "attack": "static",
+      "f1_mean": 1.0,
+      "f1_std": 0.0,
+      "trust_sep": 0.9958,
+      "dp_epsilon": 0.3,
+      "avg_fp": 0.0,
+      "seed_results": [
+        {
+          "f1": 1.0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "fp": 0,
+          "trust_sep": 0.9957934334560299,
+          "dp_eps": 0.3
+        }
+      ]
+    },
+    {
+      "sybil_pct": 90,
+      "attack": "static",
+      "f1_mean": 0.9474,
+      "f1_std": 0.0,
+      "trust_sep": 0.9957,
+      "dp_epsilon": 0.3,
+      "avg_fp": 10.0,
+      "seed_results": [
+        {
+          "f1": 0.9473684210526316,
+          "precision": 0.9,
+          "recall": 1.0,
+          "fp": 10,
+          "trust_sep": 0.995732574679943,
+          "dp_eps": 0.3
+        }
+      ]
+    }
+  ]
+}

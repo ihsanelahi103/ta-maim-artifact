@@ -1,0 +1,101 @@
+[
+  {
+    "sybil_pct": 10,
+    "attack": "collusion",
+    "sybil_f1": 1.0,
+    "false_positives": 0,
+    "detection_latency": 160,
+    "partial_detection": 156,
+    "trust_sep": 0.7137,
+    "dp_epsilon": 0.3,
+    "avg_reward": 3856.95
+  },
+  {
+    "sybil_pct": 20,
+    "attack": "collusion",
+    "sybil_f1": 0.8,
+    "false_positives": 10,
+    "detection_latency": 18,
+    "partial_detection": 5,
+    "trust_sep": -0.0007,
+    "dp_epsilon": 0.3,
+    "avg_reward": 2645.74
+  },
+  {
+    "sybil_pct": 30,
+    "attack": "collusion",
+    "sybil_f1": 1.0,
+    "false_positives": 0,
+    "detection_latency": 8,
+    "partial_detection": 5,
+    "trust_sep": 0.0312,
+    "dp_epsilon": 0.3,
+    "avg_reward": 4949.64
+  },
+  {
+    "sybil_pct": 40,
+    "attack": "collusion",
+    "sybil_f1": 0.8571,
+    "false_positives": 0,
+    "detection_latency": null,
+    "partial_detection": 5,
+    "trust_sep": 0.0012,
+    "dp_epsilon": 3.0,
+    "avg_reward": 1707.19
+  },
+  {
+    "sybil_pct": 50,
+    "attack": "collusion",
+    "sybil_f1": 1.0,
+    "false_positives": 0,
+    "detection_latency": 157,
+    "partial_detection": 5,
+    "trust_sep": 0.405,
+    "dp_epsilon": 0.3,
+    "avg_reward": 6573.81
+  },
+  {
+    "sybil_pct": 60,
+    "attack": "collusion",
+    "sybil_f1": 1.0,
+    "false_positives": 0,
+    "detection_latency": 158,
+    "partial_detection": 8,
+    "trust_sep": 0.4831,
+    "dp_epsilon": 0.3,
+    "avg_reward": 7549.63
+  },
+  {
+    "sybil_pct": 70,
+    "attack": "collusion",
+    "sybil_f1": 0.6,
+    "false_positives": 0,
+    "detection_latency": null,
+    "partial_detection": null,
+    "trust_sep": 0.0008,
+    "dp_epsilon": 3.0,
+    "avg_reward": 903.34
+  },
+  {
+    "sybil_pct": 80,
+    "attack": "collusion",
+    "sybil_f1": 0.5455,
+    "false_positives": 0,
+    "detection_latency": null,
+    "partial_detection": null,
+    "trust_sep": 0.0007,
+    "dp_epsilon": 3.0,
+    "avg_reward": 643.77
+  },
+  {
+    "sybil_pct": 90,
+    "attack": "collusion",
+    "sybil_f1": 0.5,
+    "false_positives": 0,
+    "detection_latency": null,
+    "partial_detection": null,
+    "trust_sep": 0.0006,
+    "dp_epsilon": 3.0,
+    "avg_reward": 401.49
+  }
+]

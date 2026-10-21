@@ -1,0 +1,17 @@
+[
+  {
+    "f1_at_true_k": 0.2,
+    "precision_at_true_k": 0.2,
+    "recall_at_true_k": 0.2,
+    "auc": 0.4681,
+    "precision_at_k": {
+      "10": 0.0,
+      "20": 0.1,
+      "30": 0.2
+    },
+    "dataset": "yelp",
+    "attack": "static",
+    "num_seeds": 3,
+    "num_components": 1
+  }
+]

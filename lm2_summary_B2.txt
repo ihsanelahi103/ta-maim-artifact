@@ -1,0 +1,53 @@
+streams: {'quality-matching': 25, 'collusion': 5, 'camouflage': 5, 'benign-community': 10} loaded in 1s cfg {'B': 2, 'c': 0.1, 'dprime': 2.0}
+
+=== held-out family: quality-matching (n=25 streams) ===
+policy       net U honestDrop sybKept  checks
+ALL         7431.7   0.000   1.000       0
+HARD        9694.9   0.001   0.534       0
+RANDOM     10435.8   0.025   0.194     190
+RR         10399.3   0.022   0.209     185
+SUS        10756.8   0.026   0.093     185
+FLAG       10763.5   0.024   0.097     186
+BND        10765.8   0.025   0.094     186
+LRN-F      10466.7   0.026   0.175     186
+LRN-O      10433.7   0.025   0.192     188
+ORACLE     11434.2   0.000   0.000       0
+strongest rule on this family: BND ; sanity gate (train streams): LRN-F 10460.7 vs RANDOM 10516.9
+  LRN-F vs BND: relative improvement -0.028  95% CI [-0.038, -0.019]  honest-ok True sybil-ok False -> FAIL-family
+  LRN-O vs BND: relative improvement -0.031  95% CI [-0.039, -0.023]  honest-ok True sybil-ok False -> FAIL-family
+
+=== held-out family: camouflage (n=5 streams) ===
+policy       net U honestDrop sybKept  checks
+ALL         8396.7   0.000   1.000       0
+HARD        8570.2   0.000   0.724       0
+RANDOM      9814.9   0.027   0.252     190
+RR          9771.0   0.013   0.295     193
+SUS        10650.5   0.022   0.117     182
+FLAG       10650.5   0.022   0.117     182
+BND        10650.5   0.022   0.117     182
+LRN-F      10163.0   0.024   0.197     187
+LRN-O       9733.8   0.030   0.270     184
+ORACLE     11435.3   0.000   0.000       0
+strongest rule on this family: SUS ; sanity gate (train streams): LRN-F 10590.0 vs RANDOM 10618.2
+  LRN-F vs SUS: relative improvement -0.046  95% CI [-0.062, -0.035]  honest-ok True sybil-ok False -> FAIL-family
+  LRN-O vs SUS: relative improvement -0.086  95% CI [-0.093, -0.079]  honest-ok True sybil-ok False -> FAIL-family
+
+=== held-out family: benign-community (n=10 streams) ===
+policy       net U honestDrop sybKept  checks
+ALL         6555.6   0.000   1.000       0
+HARD       10028.3   0.107   0.038       0
+RANDOM     10589.0   0.048   0.058     190
+RR         10649.8   0.041   0.061     191
+SUS        10720.8   0.028   0.077     186
+FLAG       10760.4   0.031   0.063     189
+BND        10773.1   0.030   0.061     188
+LRN-F      10788.6   0.028   0.064     186
+LRN-O      10621.9   0.045   0.058     186
+ORACLE     11441.7   0.000   0.000       0
+strongest rule on this family: BND ; sanity gate (train streams): LRN-F 10450.9 vs RANDOM 10481.3
+  LRN-F vs BND: relative improvement 0.002  95% CI [-0.013, 0.014]  honest-ok True sybil-ok True -> FAIL-family
+  LRN-O vs BND: relative improvement -0.014  95% CI [-0.031, 0.005]  honest-ok True sybil-ok True -> FAIL-family
+
+SANITY GATE (learner beats RANDOM on training streams in every fold): False
+OVERALL LRN-F: 0 of 3 held-out families pass -> INCONCLUSIVE (sanity gate failed)
+OVERALL LRN-O: 0 of 3 held-out families pass -> INCONCLUSIVE (sanity gate failed)

@@ -1,0 +1,118 @@
+lm4_run.py sha256: f50a1c7f1fd7d5c0 | lm3_run.py sha256: a8dead711d6b62da
+LEAK CHECK: True | train streams {'quality-matching': 25, 'collusion': 5, 'camouflage': 5, 'benign-community': 10} | test streams {'quality-matching': 25, 'camouflage': 5, 'benign-community': 10}
+
+=== B=1  held-out family: quality-matching (n=25 independent streams) ===
+policy         net U    regret    poison      cost honestDrop   sybKept
+ALL           7417.8    4015.8    4015.8       0.0     0.000     1.000
+HARD          9712.7    1720.9    1682.1       0.0     0.003     0.525
+RANDOM       10206.7    1226.9     994.0      18.8     0.019     0.293
+RR           10036.8    1396.8    1176.2      18.2     0.018     0.349
+SUS          10699.7     733.9     540.2      18.7     0.015     0.141
+FLAG         10674.4     759.2     554.0      18.7     0.016     0.144
+BND          10709.7     723.9     513.7      18.6     0.017     0.136
+UNC          10504.1     929.5     655.9      18.6     0.022     0.183
+TUNED-LIN    10673.9     759.7     592.7      18.8     0.013     0.164
+VOI          10843.9     589.7     433.8      18.7     0.012     0.118
+ORACLE       11433.6       0.0       0.0       0.0     0.000     0.000
+strongest rule: BND | its regret / U (headroom) 0.068
+  [PRIMARY] VOI vs BND: regret reduction 0.159 CI [0.038, 0.274] honest-ok True sybil-ok True -> PASS-family
+  [secondary] VOI vs SUS: regret reduction 0.204 CI [0.119, 0.293] honest-ok True sybil-ok True -> PASS-family
+  [PRIMARY] VOI vs BND: regret reduction 0.159 CI [0.038, 0.274] honest-ok True sybil-ok True -> PASS-family
+  [old criterion] net-utility change vs BND: 0.0127 (needs +0.05)
+
+=== B=1  held-out family: camouflage (n=5 independent streams) ===
+policy         net U    regret    poison      cost honestDrop   sybKept
+ALL           8200.1    3233.5    3233.5       0.0     0.000     1.000
+HARD          8347.1    3086.6    3086.6       0.0     0.000     0.769
+RANDOM        9142.3    2291.4    2084.4      19.2     0.016     0.440
+RR            8384.0    3049.7    2609.2      17.7     0.037     0.557
+SUS          10343.4    1090.2     854.3      18.2     0.019     0.165
+FLAG         10343.4    1090.2     854.3      18.2     0.019     0.165
+BND          10343.4    1090.2     854.3      18.2     0.019     0.165
+UNC          10065.3    1368.4    1184.1      18.2     0.015     0.244
+TUNED-LIN    10060.4    1373.3    1211.7      18.5     0.013     0.268
+VOI          10373.8    1059.8     936.6      18.3     0.009     0.178
+ORACLE       11433.7       0.0       0.0       0.0     0.000     0.000
+strongest rule: SUS | its regret / U (headroom) 0.105
+  [PRIMARY] VOI vs SUS: regret reduction 0.008 CI [-0.164, 0.181] honest-ok True sybil-ok True -> INCONCLUSIVE-family
+  [PRIMARY] VOI vs SUS: regret reduction 0.008 CI [-0.164, 0.181] honest-ok True sybil-ok True -> INCONCLUSIVE-family
+  [secondary] VOI vs BND: regret reduction 0.008 CI [-0.164, 0.181] honest-ok True sybil-ok True -> INCONCLUSIVE-family
+  [old criterion] net-utility change vs SUS: 0.0032 (needs +0.05)
+
+=== B=1  held-out family: benign-community (n=10 independent streams) ===
+policy         net U    regret    poison      cost honestDrop   sybKept
+ALL           6514.4    4912.3    4912.3       0.0     0.000     1.000
+HARD          9808.0    1618.7     197.0       0.0     0.125     0.040
+RANDOM       10226.1    1200.6     284.7      18.4     0.078     0.058
+RR           10352.6    1074.1     237.3      18.4     0.071     0.049
+SUS          10740.5     686.2     288.4      18.8     0.033     0.059
+FLAG         10727.6     699.1     292.4      18.8     0.034     0.060
+BND          10701.8     725.0     323.7      18.6     0.033     0.066
+UNC          10574.0     852.7     267.8      18.5     0.049     0.055
+TUNED-LIN    10733.1     693.6     307.0      19.1     0.032     0.063
+VOI          10857.1     569.6     227.7      18.4     0.028     0.047
+ORACLE       11426.7       0.0       0.0       0.0     0.000     0.000
+strongest rule: SUS | its regret / U (headroom) 0.064
+  [PRIMARY] VOI vs SUS: regret reduction 0.104 CI [-0.093, 0.294] honest-ok True sybil-ok True -> INCONCLUSIVE-family
+  [PRIMARY] VOI vs SUS: regret reduction 0.104 CI [-0.093, 0.294] honest-ok True sybil-ok True -> INCONCLUSIVE-family
+  [secondary] VOI vs BND: regret reduction 0.131 CI [-0.111, 0.337] honest-ok True sybil-ok True -> INCONCLUSIVE-family
+  [old criterion] net-utility change vs SUS: 0.0113 (needs +0.05)
+B=1: VOI primary criterion passed in 1 of 3 families
+
+=== B=2  held-out family: quality-matching (n=25 independent streams) ===
+policy         net U    regret    poison      cost honestDrop   sybKept
+ALL           7417.8    4015.8    4015.8       0.0     0.000     1.000
+HARD          9712.7    1720.9    1682.1       0.0     0.003     0.525
+RANDOM       10480.1     953.5     674.4      18.7     0.023     0.186
+RR           10374.9    1058.7     747.1      18.8     0.026     0.210
+SUS          10755.1     678.5     356.3      18.6     0.027     0.091
+FLAG         10755.6     678.0     346.2      18.5     0.027     0.089
+BND          10751.1     682.5     358.4      18.5     0.027     0.092
+UNC          10683.7     749.9     434.7      18.8     0.026     0.115
+TUNED-LIN    10808.5     625.1     394.2      18.3     0.019     0.098
+VOI          10843.5     590.1     301.2      18.7     0.024     0.076
+ORACLE       11433.6       0.0       0.0       0.0     0.000     0.000
+strongest rule: TUNED-LIN | its regret / U (headroom) 0.058
+  [PRIMARY] VOI vs TUNED-LIN: regret reduction 0.000 CI [-0.157, 0.149] honest-ok True sybil-ok True -> INCONCLUSIVE-family
+  [secondary] VOI vs SUS: regret reduction 0.054 CI [-0.102, 0.205] honest-ok True sybil-ok True -> INCONCLUSIVE-family
+  [secondary] VOI vs BND: regret reduction 0.051 CI [-0.106, 0.210] honest-ok True sybil-ok True -> INCONCLUSIVE-family
+  [old criterion] net-utility change vs TUNED-LIN: 0.0034 (needs +0.05)
+
+=== B=2  held-out family: camouflage (n=5 independent streams) ===
+policy         net U    regret    poison      cost honestDrop   sybKept
+ALL           8200.1    3233.5    3233.5       0.0     0.000     1.000
+HARD          8347.1    3086.6    3086.6       0.0     0.000     0.769
+RANDOM        9652.9    1780.8    1397.5      18.8     0.032     0.281
+RR            9508.3    1925.4    1633.0      19.4     0.024     0.326
+SUS          10631.8     801.8     546.8      19.2     0.021     0.121
+FLAG         10631.8     801.8     546.8      19.2     0.021     0.121
+BND          10631.8     801.8     546.8      19.2     0.021     0.121
+UNC          10388.6    1045.1     725.5      19.5     0.026     0.139
+TUNED-LIN    10386.1    1047.5     535.4      18.5     0.043     0.118
+VOI          10429.0    1004.6     611.2      18.3     0.033     0.127
+ORACLE       11433.7       0.0       0.0       0.0     0.000     0.000
+strongest rule: SUS | its regret / U (headroom) 0.075
+  [PRIMARY] VOI vs SUS: regret reduction -0.370 CI [-0.741, 0.063] honest-ok True sybil-ok True -> FAIL-family
+  [PRIMARY] VOI vs SUS: regret reduction -0.370 CI [-0.741, 0.063] honest-ok True sybil-ok True -> FAIL-family
+  [secondary] VOI vs BND: regret reduction -0.370 CI [-0.741, 0.063] honest-ok True sybil-ok True -> FAIL-family
+  [old criterion] net-utility change vs SUS: -0.0186 (needs +0.05)
+
+=== B=2  held-out family: benign-community (n=10 independent streams) ===
+policy         net U    regret    poison      cost honestDrop   sybKept
+ALL           6514.4    4912.3    4912.3       0.0     0.000     1.000
+HARD          9808.0    1618.7     197.0       0.0     0.125     0.040
+RANDOM       10647.7     779.1     295.4      18.6     0.041     0.060
+RR           10583.9     842.8     331.9      18.8     0.043     0.068
+SUS          10796.0     630.8     300.8      18.8     0.027     0.062
+FLAG         10788.0     638.7     306.8      18.7     0.028     0.063
+BND          10583.3     843.4     342.7      18.6     0.042     0.070
+UNC          10707.7     719.0     257.1      18.6     0.039     0.052
+TUNED-LIN    10658.0     768.7     256.8      18.1     0.043     0.052
+VOI          10761.7     665.0     206.7      18.0     0.039     0.042
+ORACLE       11426.7       0.0       0.0       0.0     0.000     0.000
+strongest rule: SUS | its regret / U (headroom) 0.058
+  [PRIMARY] VOI vs SUS: regret reduction -0.174 CI [-0.567, 0.205] honest-ok True sybil-ok True -> INCONCLUSIVE-family
+  [PRIMARY] VOI vs SUS: regret reduction -0.174 CI [-0.567, 0.205] honest-ok True sybil-ok True -> INCONCLUSIVE-family
+  [secondary] VOI vs BND: regret reduction 0.149 CI [-0.121, 0.395] honest-ok True sybil-ok True -> INCONCLUSIVE-family
+  [old criterion] net-utility change vs SUS: -0.0029 (needs +0.05)
+B=2: VOI primary criterion passed in 0 of 3 families

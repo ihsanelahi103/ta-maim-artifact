@@ -1,0 +1,59 @@
+# Pre-registration: binding-budget verification allocation, with a Double-DQN allocator (written 18 Oct 2026, BEFORE any test-stream result exists)
+Amendment 1 (18 Oct ~06:35, before any run, after the user's review): test seeds changed from 1-5 to 101-105 (Issue A); information structure and claim wording added (Issue B); policy view of the stream stripped to feature keys and a structural leak check added to the code (hash updated above). No result existed at the time.
+Status: confirmatory test of one question. The manuscript (deliver_1018a) is unchanged by this study unless every PASS condition below is met AND an in-loop confirmation is later run. If the criterion is not met, the existing negative findings stay and NO new TA-DDQN novelty claim is made.
+Code: experiments/lm3_run.py, SHA-256 a8dead711d6b62da7a9bf4f5e7c22fbb8c714275a044de2383dcf178f58d281c (verify with `sha256sum` before running; any edit after this point is reported as a deviation). It imports experiments/lm2_run.py unchanged (streams, features, shared status rule, utility, rules, PL-REINFORCE learner).
+
+## Question
+When verification is scarce enough to constrain decisions (B = 1, 2 checks per episode for 100 contributors), does a Double-DQN allocator (the learner family of TA-DDQN) beat the strongest equally informed fixed or adaptive rule on cumulative security-adjusted utility?
+
+## Which learner this is (identity, stated before running)
+- **TA-DDQN-V (primary learner) is NOT the manuscript's TA-DDQN policy.** The manuscript's TA-DDQN is a Double DQN over a 20-d agent state choosing among mining actions. TA-DDQN-V uses the same learner family and the same hyper-parameters (Double DQN, Adam lr 1e-3, gamma .95, batch 64, buffer 5000, soft target tau .01, eps-greedy 1.0 -> .05, decay .995 per episode, MLP with 128 hidden units) but a different state, action space and reward: Q(x_j) scores the 10 contributor features of lm2_run.py, the action is "check contributor j", and the next state is the candidate set of the next episode (Double-DQN target: online-net argmax over candidates, target-net value). Reward: the pool-level noisy validation reward R_t = U_t + N(0, 2^2) (the only reward the learners get), centred by an EMA and scaled by a running SD, split equally among that episode's checks. Network: two hidden layers of 128 (ReLU), one scalar output. One gradient step per episode.
+- A PASS supports only "a Double-DQN allocator of the TA-DDQN family adds value for scarce verification". It is not evidence for the manuscript's TA-DDQN, whose measured effect on robustness remains nil. A PASS would be written as a separate, scoped result.
+- LRN (the existing Plackett-Luce REINFORCE learner, unchanged) is run as a secondary learner. It is not TA-DDQN. A pass by LRN alone creates no TA-DDQN claim.
+
+## Prior exposure (disclosure)
+Before this protocol: (a) lm2 at B = 10, pre-registered, FAIL (credible null) on seeds 7, 11, 42, 99, 123; (b) lm2 at B = 2, POST HOC, learner below the best rule and the sanity gate failed (INCONCLUSIVE); (c) learned merge policy, FAIL. Those results are known; this study is not blind to them. Prior expectation that TA-DDQN-V passes: low. Changes made because of (b): pre-training passes raised (LRN 3 -> 10, DDQN 5) and a binding diagnostic added; all fixed here and not tuned further.
+
+## Independent evaluation (three kinds of seeds, kept apart)
+- Seeds 7, 11, 42, 99, 123: used earlier (lm2 pre-registered B = 10, post-hoc B = 2, learned merge) and to choose the design (features, d', cost, families). Here they are used ONLY for pre-training and for fitting TUNED-LIN (other families, leave-one-family-out).
+- Seeds 1-5: used for the detector replication (R1-R6), where their detection outcomes were examined. They did not influence the allocator design, but they are NOT called untouched and are NOT used here.
+- Seeds 101-105: predetermined now, generated for this study (jobs_bv_test.txt), never examined. These are the ONLY test streams. All 8 test regimes x 5 seeds = 40 uncensored shadow-mode streams.
+- Families (3, frozen): quality-matching {qmatch, band1, band2, qm_ae10, qm_l050} (25 streams), camouflage {camou} (5), benign-community {bc10, bc20} (10). Collusion {collude} is training-only (no headroom). The regime/family structure was fixed before seeing any 101-105 stream.
+- Completion rule (fixed now): lm3 starts when all 40 streams exist, or at the deadline Mon 19 Oct 22:00 local, whichever first. At the deadline only regimes with all five seeds are used; a family with no complete regime cannot pass. Priority order of generation: camou, bc10, bc20, qmatch, band1, band2, qm_ae10, qm_l050.
+
+## What the replay does and does not establish (claim wording fixed before running)
+- The streams (graph, raw qualities, who mines when, CATS signals) are exogenous and recorded. No decision changes them. Decisions change only the verification state (running LLR, confirmed/unresolved status, which contributors are eligible, number of checks) and the merge. Checking A rather than B therefore changes the future verification trajectory, but NOT the future attack behaviour, trust, quarantine or later contributions: counterfactual trajectories of the mining environment are not modelled.
+- Consequently the study tests an offline sequential allocation problem (scarce checks, eligibility, a stopping rule, delayed effect on the pool through confirmations) against a modelled noisy verifier. It does not establish interactive sequential learning in the live system. A PASS may be described only as "a Double-DQN allocator beats fixed and adaptive rules in an offline, modelled-verifier replay with scarce checks"; the manuscript could use it only after an in-loop confirmation.
+- Information given to policies (audited in code: `VIEW_KEYS`, `leak_check`): features computed from data through episode ep-1 (CATS S/C/suspicion, latch, window-15 mean/std of PAST raw quality), own check count and running LLR (which depends on labels only through the modelled verifier's observable, noisy score), episode fraction. Rules receive a view containing only these keys. Learners receive the same feature matrix plus the pool-level noisy validation reward R_t (an aggregate over the merged pool, N(0,2^2) noise, equal split among checks): this reward is label-dependent as an aggregate, as a real held-out validation would be; no per-contributor label, no future outcome, no raw quality of the current or later episodes. Pre-training uses future rewards only through the usual return/bootstrapping inside training streams; at test (F) nothing is learned.
+- ORACLE (true labels, free) is used ONLY to estimate headroom and as a reference row; no policy sees it. TUNED-LIN is fitted on training streams with the TRUE net utility (labels used at fit time on training streams only): it is more informed than the learners and therefore a conservative benchmark. The strongest rule is chosen with test information (conservative). `leak_check` asserts that features are unchanged when labels, verifier noise and raw qualities of episodes >= ep are replaced; the CATS signals are precomputed by fs_analyze.cats_replay, which records an episode's qualities only after reading that episode's signals (checked in the code).
+
+## Budgets and the binding check
+- Budgets B in {1, 2, 5, 20} checks per episode, system-wide; cost c = .10 per check; d' = 2; LAM = 1 (security weight); status rule +-ln 9 as before.
+- Binding diagnostic (computed under RANDOM allocation before any learner is trained, all streams): mean eligible unresolved contributors per episode, unresolved share at episodes 50, 100 and E, checks per contributor. **A budget is called binding iff >= 25% of contributors are still unresolved at episode 100 under RANDOM.** Primary budgets are B = 1 and B = 2 and count only if binding. B = 5 and B = 20 are non-binding controls expected to reproduce the earlier null.
+- Headroom: for each family and budget, headroom = (U_ORACLE - U_strongest rule)/|U_strongest rule|. The +5% criterion cannot be met in a family with headroom < 5% (the earlier B = 10 test had about 5-7% headroom, so +5% was nearly unreachable). Such a family is reported as NO-HEADROOM (cannot pass; counted as not passing). The criterion is kept at +5% as requested; no other threshold is substituted. Gap closed ((U - U_rule)/(U_ORACLE - U_rule)) is reported as secondary context only.
+
+## Methods (all get the same B, c, d', features, status rule, streams, noise)
+Fixed rules: RANDOM, RR (least recently checked), SUS (highest CATS suspicion), FLAG (latched first, then suspicion), BND (suspicion closest to .55). Adaptive rules: UNC (uncertainty sampling: posterior log-odds = logit(suspicion) + running LLR closest to 0) and TUNED-LIN (linear score on the same 10 features, weights fitted by the cross-entropy method on up to 8 pre-training streams using their TRUE net utility, a more informed and therefore conservative benchmark; 8 iterations x 12 candidates, seed 0). References: ALL, HARD (CATS latch, no checks), ORACLE (true labels, no cost, ceiling). Learners: TA-DDQN-V-F (frozen after pre-training, PRIMARY), TA-DDQN-V-O (continues online on the test stream), LRN-F, LRN-O; 5 learner seeds. Strongest rule on a family = best mean net utility among {RANDOM, RR, SUS, FLAG, BND, UNC, TUNED-LIN} on that family's test streams (deliberately conservative: chosen with test information).
+
+## Metrics (reported separately)
+Primary: cumulative net utility over episodes 3..E, U = honest value merged - LAM x poison merged - c x checks. Also: poisoning exposure (poison merged, Sybil-merged share), verification cost, honest false quarantines (honest-dropped share), checks. Secondary: LAM in {0.5, 2} (not run unless time allows), d' in {1, 3}, c in {.05, .20} (not run unless time allows).
+
+## Sanity gate
+Per budget and fold, the pre-trained TA-DDQN-V must beat RANDOM on mean net utility over the pre-training streams. If it fails in any fold, that budget is INCONCLUSIVE for the learner (not evidence against).
+
+## Success criterion (primary learner TA-DDQN-V-F; all required)
+1. At each primary budget that is binding (B = 1 and B = 2): mean relative improvement (U_V - U_R)/|U_R| >= 0.05 against the strongest rule R, in >= 2 of the 3 families.
+2. Paired bootstrap 95% CI (2000 draws over test streams, learner seeds averaged) excludes 0 in each of those families.
+3. Honest-dropped share and Sybil-merged share each <= the rule's + 0.02.
+4. Sanity gate passed at that budget.
+5. No label-dependent training signal (pool-level noisy reward and observable verification scores only; labels only score outcomes).
+Overall PASS = criteria met at EVERY binding primary budget. INCONCLUSIVE = sanity gate failed or a family CI contains both 0 and +5% (and there is headroom). NO-HEADROOM families cannot pass. FAIL otherwise. No retuning after any test result; any later change is a labelled post-hoc analysis. All outcomes, including failures, are reported.
+
+## If PASS / if not
+PASS: an exploratory finding only; the manuscript changes only after an in-loop evaluation and within the 8+4 page budget; the registered abstract stays. Not PASS: the existing negative findings stay; at most one appendix sentence (binding budgets B = 1, 2 also give no learned gain; or inconclusive); no new TA-DDQN novelty claim.
+
+## Known limits (stated in advance)
+Offline replay (actions do not change the stream); modelled noisy verifier with fixed d'; the CATS evidence comes from simulated streams; the primary-learner choice (frozen) and the reward credit-assignment split are design choices that a different allocator might improve on; this tests one allocator, not all learners.
+
+## Timeline
+18-19 Oct: generate the 40 streams (about 3-4 h on 2 cores) and run B = 1, 2, 5, 20 on the user's machine (about 1.5-3 h). 20 Oct: results read; decision gate 22 Oct.

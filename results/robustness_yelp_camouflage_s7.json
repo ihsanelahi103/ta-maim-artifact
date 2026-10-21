@@ -1,0 +1,137 @@
+{
+  "camouflage": [
+    {
+      "sybil_pct": 10,
+      "attack": "camouflage",
+      "f1_mean": 1.0,
+      "f1_std": 0.0,
+      "trust_sep": 0.994,
+      "dp_epsilon": 0.3,
+      "avg_fp": 0.0,
+      "seed_results": [
+        {
+          "f1": 1.0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "fp": 0,
+          "trust_sep": 0.9940025566032716,
+          "dp_eps": 0.3
+        }
+      ]
+    },
+    {
+      "sybil_pct": 20,
+      "attack": "camouflage",
+      "f1_mean": 1.0,
+      "f1_std": 0.0,
+      "trust_sep": 0.2766,
+      "dp_epsilon": 0.3,
+      "avg_fp": 0.0,
+      "seed_results": [
+        {
+          "f1": 1.0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "fp": 0,
+          "trust_sep": 0.27659504740705954,
+          "dp_eps": 0.3
+        }
+      ]
+    },
+    {
+      "sybil_pct": 30,
+      "attack": "camouflage",
+      "f1_mean": 1.0,
+      "f1_std": 0.0,
+      "trust_sep": 0.2412,
+      "dp_epsilon": 0.3,
+      "avg_fp": 0.0,
+      "seed_results": [
+        {
+          "f1": 1.0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "fp": 0,
+          "trust_sep": 0.24122802021478051,
+          "dp_eps": 0.3
+        }
+      ]
+    },
+    {
+      "sybil_pct": 40,
+      "attack": "camouflage",
+      "f1_mean": 1.0,
+      "f1_std": 0.0,
+      "trust_sep": 0.1032,
+      "dp_epsilon": 0.3,
+      "avg_fp": 0.0,
+      "seed_results": [
+        {
+          "f1": 1.0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "fp": 0,
+          "trust_sep": 0.10317900851847273,
+          "dp_eps": 0.3
+        }
+      ]
+    },
+    {
+      "sybil_pct": 50,
+      "attack": "camouflage",
+      "f1_mean": 1.0,
+      "f1_std": 0.0,
+      "trust_sep": 0.1025,
+      "dp_epsilon": 0.3,
+      "avg_fp": 0.0,
+      "seed_results": [
+        {
+          "f1": 1.0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "fp": 0,
+          "trust_sep": 0.10247128701191954,
+          "dp_eps": 0.3
+        }
+      ]
+    },
+    {
+      "sybil_pct": 70,
+      "attack": "camouflage",
+      "f1_mean": 1.0,
+      "f1_std": 0.0,
+      "trust_sep": 0.0698,
+      "dp_epsilon": 0.3,
+      "avg_fp": 0.0,
+      "seed_results": [
+        {
+          "f1": 1.0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "fp": 0,
+          "trust_sep": 0.06975541041548972,
+          "dp_eps": 0.3
+        }
+      ]
+    },
+    {
+      "sybil_pct": 90,
+      "attack": "camouflage",
+      "f1_mean": 0.9474,
+      "f1_std": 0.0,
+      "trust_sep": 0.0715,
+      "dp_epsilon": 0.3,
+      "avg_fp": 10.0,
+      "seed_results": [
+        {
+          "f1": 0.9473684210526316,
+          "precision": 0.9,
+          "recall": 1.0,
+          "fp": 10,
+          "trust_sep": 0.07153045680598291,
+          "dp_eps": 0.3
+        }
+      ]
+    }
+  ]
+}

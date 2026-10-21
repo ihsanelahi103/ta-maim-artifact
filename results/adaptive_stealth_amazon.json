@@ -1,0 +1,52 @@
+{
+  "per_seed": [
+    {
+      "attack": "adaptive_stealth",
+      "dataset": "amazon",
+      "seed": 42,
+      "sybil_f1": 1.0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "false_positives": 0,
+      "partial_det_ep": 88,
+      "full_det_ep": 118,
+      "trust_sep": -0.0001,
+      "dp_epsilon": 0.3,
+      "avg_reward": 2420.96
+    },
+    {
+      "attack": "adaptive_stealth",
+      "dataset": "amazon",
+      "seed": 123,
+      "sybil_f1": 1.0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "false_positives": 0,
+      "partial_det_ep": 95,
+      "full_det_ep": 105,
+      "trust_sep": -0.001,
+      "dp_epsilon": 0.3,
+      "avg_reward": 2425.66
+    },
+    {
+      "attack": "adaptive_stealth",
+      "dataset": "amazon",
+      "seed": 7,
+      "sybil_f1": 1.0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "false_positives": 0,
+      "partial_det_ep": 93,
+      "full_det_ep": 117,
+      "trust_sep": -0.0008,
+      "dp_epsilon": 0.3,
+      "avg_reward": 2427.98
+    }
+  ],
+  "f1_mean": 1.0,
+  "f1_std": 0.0,
+  "lat_mean": 113.33333333333333,
+  "lat_std": 5.90668171555645,
+  "sep_mean": -0.0006333333333333334,
+  "sep_std": 0.0003858612300930075
+}

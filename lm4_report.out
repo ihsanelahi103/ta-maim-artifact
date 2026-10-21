@@ -1,0 +1,192 @@
+
+##### B=1 binding diagnostic on the NEW streams (RANDOM): {'mean_eligible': 48.42, 'unresolved_50': 0.757, 'unresolved_100': 0.49, 'unresolved_E': 0.01, 'checks_per_contributor': 1.822}  -> binding=True (rule: unresolved at ep 100 >= 0.25)
+
+=== B=1  quality-matching (n=25)  strongest rule: BND  oracle headroom (regret/U of the rule): 0.068 ===
+policy         net U    regret    poison     cost honestDrop  sybKept
+ALL           7417.8    4015.8    4015.8      0.0    0.000    1.000
+HARD          9712.7    1720.9    1682.1      0.0    0.003    0.525
+RANDOM       10206.7    1226.9     994.0     18.8    0.019    0.293
+RR           10036.8    1396.8    1176.2     18.2    0.018    0.349
+SUS          10699.7     733.9     540.2     18.7    0.015    0.141
+FLAG         10674.4     759.2     554.0     18.7    0.016    0.144
+BND          10709.7     723.9     513.7     18.6    0.017    0.136
+UNC          10504.1     929.5     655.9     18.6    0.022    0.183
+TUNED-LIN    10673.9     759.7     592.7     18.8    0.013    0.164
+VOI          10843.9     589.7     433.8     18.7    0.012    0.118
+ORACLE       11433.6       0.0       0.0      0.0    0.000    0.000
+PRIMARY regret reduction vs BND: 0.159  CI [0.038, 0.274]  honest-ok True sybil-ok True -> PASS-family
+relative net-utility improvement vs BND: 0.0127  CI [0.0055, 0.0199]   (old +5% criterion: not met)
+per-stream (regret_BND -> regret_VOI, reduction):
+   qmatch_s201.json      690.4 ->    757.3  -0.097   poison   535.7 ->   658.6   honestDrop 0.012 -> 0.007
+   qmatch_s202.json      900.2 ->    503.4  +0.441   poison   478.0 ->   251.9   honestDrop 0.035 -> 0.020
+   qmatch_s203.json      533.7 ->    204.1  +0.618   poison   110.0 ->    75.8   honestDrop 0.035 -> 0.010
+   qmatch_s204.json      281.6 ->    515.4  -0.831   poison   170.0 ->   150.7   honestDrop 0.008 -> 0.030
+   qmatch_s205.json      388.4 ->    130.6  +0.664   poison    69.1 ->    61.0   honestDrop 0.026 -> 0.004
+   qm_ae10_s201.json    1115.1 ->    742.5  +0.334   poison   552.2 ->   508.9   honestDrop 0.047 -> 0.019
+   qm_ae10_s202.json     866.3 ->    794.9  +0.082   poison   757.2 ->   732.5   honestDrop 0.008 -> 0.004
+   qm_ae10_s203.json     697.7 ->    788.6  -0.130   poison   601.1 ->   549.4   honestDrop 0.007 -> 0.019
+   qm_ae10_s204.json     653.1 ->    587.0  +0.101   poison   522.5 ->   507.0   honestDrop 0.010 -> 0.005
+   qm_ae10_s205.json     794.8 ->    442.1  +0.444   poison   586.1 ->   412.6   honestDrop 0.017 -> 0.001
+   qm_l050_s201.json     796.3 ->    889.8  -0.117   poison   778.3 ->   800.7   honestDrop 0.000 -> 0.006
+   qm_l050_s202.json    1320.9 ->    683.9  +0.482   poison  1108.9 ->   602.3   honestDrop 0.017 -> 0.005
+   qm_l050_s203.json    1340.0 ->   1376.7  -0.027   poison  1006.7 ->   792.5   honestDrop 0.027 -> 0.049
+   qm_l050_s204.json     938.5 ->    782.2  +0.167   poison   695.5 ->   394.9   honestDrop 0.020 -> 0.032
+   qm_l050_s205.json     446.5 ->    252.2  +0.435   poison   371.2 ->   171.2   honestDrop 0.005 -> 0.005
+   band1_s201.json       735.5 ->    552.4  +0.249   poison   517.2 ->   415.5   honestDrop 0.017 -> 0.010
+   band1_s202.json       475.2 ->    531.7  -0.119   poison   457.2 ->   407.5   honestDrop 0.000 -> 0.009
+   band1_s203.json       580.2 ->    605.1  -0.043   poison   327.3 ->   390.6   honestDrop 0.021 -> 0.017
+   band1_s204.json       544.5 ->    624.8  -0.147   poison   346.3 ->   518.2   honestDrop 0.016 -> 0.008
+   band1_s205.json       620.5 ->    447.7  +0.278   poison   443.3 ->   306.5   honestDrop 0.014 -> 0.011
+   band2_s201.json       608.7 ->    492.7  +0.191   poison   430.5 ->   456.2   honestDrop 0.014 -> 0.002
+   band2_s202.json       521.9 ->    451.0  +0.136   poison   417.3 ->   387.5   honestDrop 0.008 -> 0.004
+   band2_s203.json       875.4 ->    615.3  +0.297   poison   393.9 ->   433.7   honestDrop 0.040 -> 0.014
+   band2_s204.json       661.3 ->    556.3  +0.159   poison   528.4 ->   463.0   honestDrop 0.010 -> 0.006
+   band2_s205.json       709.7 ->    413.8  +0.417   poison   638.9 ->   395.3   honestDrop 0.005 -> 0.000
+
+=== B=1  camouflage (n=5)  strongest rule: SUS  oracle headroom (regret/U of the rule): 0.105 ===
+policy         net U    regret    poison     cost honestDrop  sybKept
+ALL           8200.1    3233.5    3233.5      0.0    0.000    1.000
+HARD          8347.1    3086.6    3086.6      0.0    0.000    0.769
+RANDOM        9142.3    2291.4    2084.4     19.2    0.016    0.440
+RR            8384.0    3049.7    2609.2     17.7    0.037    0.557
+SUS          10343.4    1090.2     854.3     18.2    0.019    0.165
+FLAG         10343.4    1090.2     854.3     18.2    0.019    0.165
+BND          10343.4    1090.2     854.3     18.2    0.019    0.165
+UNC          10065.3    1368.4    1184.1     18.2    0.015    0.244
+TUNED-LIN    10060.4    1373.3    1211.7     18.5    0.013    0.268
+VOI          10373.8    1059.8     936.6     18.3    0.009    0.178
+ORACLE       11433.7       0.0       0.0      0.0    0.000    0.000
+PRIMARY regret reduction vs SUS: 0.008  CI [-0.164, 0.181]  honest-ok True sybil-ok True -> INCONCLUSIVE-family
+relative net-utility improvement vs SUS: 0.0032  CI [-0.0154, 0.0218]   (old +5% criterion: not met)
+per-stream (regret_SUS -> regret_VOI, reduction):
+   camou_s201.json       937.8 ->   1136.8  -0.212   poison   726.1 ->   903.9   honestDrop 0.017 -> 0.019
+   camou_s202.json      1068.6 ->   1120.6  -0.049   poison  1011.2 ->   962.1   honestDrop 0.003 -> 0.012
+   camou_s203.json      1133.7 ->    894.0  +0.211   poison   816.9 ->   862.9   honestDrop 0.026 -> 0.001
+   camou_s204.json      1286.9 ->    945.1  +0.266   poison   832.2 ->   927.5   honestDrop 0.038 -> 0.000
+   camou_s205.json      1024.2 ->   1202.7  -0.174   poison   885.3 ->  1026.3   honestDrop 0.011 -> 0.014
+
+=== B=1  benign-community (n=10)  strongest rule: SUS  oracle headroom (regret/U of the rule): 0.064 ===
+policy         net U    regret    poison     cost honestDrop  sybKept
+ALL           6514.4    4912.3    4912.3      0.0    0.000    1.000
+HARD          9808.0    1618.7     197.0      0.0    0.125    0.040
+RANDOM       10226.1    1200.6     284.7     18.4    0.078    0.058
+RR           10352.6    1074.1     237.3     18.4    0.071    0.049
+SUS          10740.5     686.2     288.4     18.8    0.033    0.059
+FLAG         10727.6     699.1     292.4     18.8    0.034    0.060
+BND          10701.8     725.0     323.7     18.6    0.033    0.066
+UNC          10574.0     852.7     267.8     18.5    0.049    0.055
+TUNED-LIN    10733.1     693.6     307.0     19.1    0.032    0.063
+VOI          10857.1     569.6     227.7     18.4    0.028    0.047
+ORACLE       11426.7       0.0       0.0      0.0    0.000    0.000
+PRIMARY regret reduction vs SUS: 0.104  CI [-0.093, 0.294]  honest-ok True sybil-ok True -> INCONCLUSIVE-family
+relative net-utility improvement vs SUS: 0.0113  CI [-0.0011, 0.0242]   (old +5% criterion: not met)
+per-stream (regret_SUS -> regret_VOI, reduction):
+   bc10_s201.json        472.2 ->    596.0  -0.262   poison   420.8 ->   365.1   honestDrop 0.003 -> 0.018
+   bc10_s202.json        575.9 ->    401.3  +0.303   poison   274.7 ->   100.1   honestDrop 0.025 -> 0.025
+   bc10_s203.json        297.9 ->    404.3  -0.357   poison   278.1 ->   193.8   honestDrop 0.000 -> 0.017
+   bc10_s204.json        486.1 ->    267.0  +0.451   poison   302.0 ->   157.3   honestDrop 0.015 -> 0.008
+   bc10_s205.json        489.8 ->    421.2  +0.140   poison   176.3 ->   278.7   honestDrop 0.026 -> 0.011
+   bc20_s201.json       1321.9 ->   1043.6  +0.211   poison   461.8 ->   346.2   honestDrop 0.074 -> 0.060
+   bc20_s202.json       1081.1 ->    816.4  +0.245   poison   397.7 ->   146.2   honestDrop 0.058 -> 0.057
+   bc20_s203.json        614.9 ->    646.7  -0.052   poison   229.0 ->   283.9   honestDrop 0.032 -> 0.030
+   bc20_s204.json        600.0 ->    766.9  -0.278   poison   120.7 ->   204.7   honestDrop 0.040 -> 0.048
+   bc20_s205.json        922.4 ->    332.8  +0.639   poison   223.3 ->   201.2   honestDrop 0.060 -> 0.010
+
+PER-SEED mean regret reduction over all streams (B=1): {'201': 0.037, '202': 0.19, '203': 0.065, '204': -0.014, '205': 0.355}
+wrote results/lm4_per_stream_B1.csv
+
+##### B=2 binding diagnostic on the NEW streams (RANDOM): {'mean_eligible': 24.516, 'unresolved_50': 0.509, 'unresolved_100': 0.003, 'unresolved_E': 0.0, 'checks_per_contributor': 1.834}  -> binding=False (rule: unresolved at ep 100 >= 0.25)
+
+=== B=2  quality-matching (n=25)  strongest rule: TUNED-LIN  oracle headroom (regret/U of the rule): 0.058 ===
+policy         net U    regret    poison     cost honestDrop  sybKept
+ALL           7417.8    4015.8    4015.8      0.0    0.000    1.000
+HARD          9712.7    1720.9    1682.1      0.0    0.003    0.525
+RANDOM       10480.1     953.5     674.4     18.7    0.023    0.186
+RR           10374.9    1058.7     747.1     18.8    0.026    0.210
+SUS          10755.1     678.5     356.3     18.6    0.027    0.091
+FLAG         10755.6     678.0     346.2     18.5    0.027    0.089
+BND          10751.1     682.5     358.4     18.5    0.027    0.092
+UNC          10683.7     749.9     434.7     18.8    0.026    0.115
+TUNED-LIN    10808.5     625.1     394.2     18.3    0.019    0.098
+VOI          10843.5     590.1     301.2     18.7    0.024    0.076
+ORACLE       11433.6       0.0       0.0      0.0    0.000    0.000
+PRIMARY regret reduction vs TUNED-LIN: 0.000  CI [-0.157, 0.149]  honest-ok True sybil-ok True -> INCONCLUSIVE-family
+relative net-utility improvement vs TUNED-LIN: 0.0034  CI [-0.0042, 0.0114]   (old +5% criterion: not met)
+per-stream (regret_TUNED-LIN -> regret_VOI, reduction):
+   qmatch_s201.json      704.5 ->    788.8  -0.120   poison   582.1 ->   552.5   honestDrop 0.009 -> 0.019
+   qmatch_s202.json      801.2 ->    232.4  +0.710   poison   656.4 ->    72.2   honestDrop 0.011 -> 0.012
+   qmatch_s203.json      402.5 ->    800.4  -0.988   poison   108.9 ->   224.2   honestDrop 0.024 -> 0.049
+   qmatch_s204.json      845.1 ->    379.7  +0.551   poison   644.9 ->   127.6   honestDrop 0.016 -> 0.020
+   qmatch_s205.json      377.6 ->    292.4  +0.226   poison   218.0 ->    55.6   honestDrop 0.012 -> 0.019
+   qm_ae10_s201.json     651.3 ->    666.1  -0.023   poison   543.9 ->   440.1   honestDrop 0.008 -> 0.018
+   qm_ae10_s202.json     859.2 ->    825.5  +0.039   poison   841.6 ->   433.1   honestDrop 0.000 -> 0.033
+   qm_ae10_s203.json     709.4 ->    804.4  -0.134   poison   471.4 ->   429.8   honestDrop 0.019 -> 0.031
+   qm_ae10_s204.json     834.5 ->    722.8  +0.134   poison   485.8 ->   293.9   honestDrop 0.029 -> 0.036
+   qm_ae10_s205.json     755.6 ->    577.8  +0.235   poison   415.4 ->   468.5   honestDrop 0.028 -> 0.008
+   qm_l050_s201.json     497.7 ->    831.1  -0.670   poison   377.1 ->   462.6   honestDrop 0.009 -> 0.031
+   qm_l050_s202.json     942.8 ->    964.5  -0.023   poison   529.8 ->   449.6   honestDrop 0.034 -> 0.043
+   qm_l050_s203.json     625.1 ->    679.4  -0.087   poison   351.0 ->   281.8   honestDrop 0.022 -> 0.033
+   qm_l050_s204.json     793.1 ->    835.9  -0.054   poison   676.9 ->   716.5   honestDrop 0.008 -> 0.009
+   qm_l050_s205.json     658.3 ->    488.4  +0.258   poison   281.8 ->   293.8   honestDrop 0.031 -> 0.015
+   band1_s201.json       316.4 ->    515.1  -0.628   poison   164.0 ->   167.0   honestDrop 0.012 -> 0.029
+   band1_s202.json       546.3 ->    445.8  +0.184   poison   325.8 ->   186.4   honestDrop 0.018 -> 0.021
+   band1_s203.json       598.8 ->    600.2  -0.002   poison   361.0 ->   215.7   honestDrop 0.019 -> 0.032
+   band1_s204.json       569.2 ->    450.0  +0.209   poison   148.2 ->   135.6   honestDrop 0.035 -> 0.026
+   band1_s205.json       276.0 ->    437.5  -0.585   poison   146.0 ->   141.2   honestDrop 0.010 -> 0.024
+   band2_s201.json       530.2 ->    315.6  +0.405   poison   254.6 ->   207.6   honestDrop 0.023 -> 0.008
+   band2_s202.json       566.7 ->    732.7  -0.293   poison   453.0 ->   377.1   honestDrop 0.008 -> 0.029
+   band2_s203.json       548.2 ->    547.4  +0.002   poison   309.7 ->   322.4   honestDrop 0.019 -> 0.018
+   band2_s204.json       608.1 ->    337.1  +0.446   poison   240.8 ->   197.8   honestDrop 0.031 -> 0.010
+   band2_s205.json       610.2 ->    481.2  +0.211   poison   266.1 ->   277.1   honestDrop 0.028 -> 0.016
+
+=== B=2  camouflage (n=5)  strongest rule: SUS  oracle headroom (regret/U of the rule): 0.075 ===
+policy         net U    regret    poison     cost honestDrop  sybKept
+ALL           8200.1    3233.5    3233.5      0.0    0.000    1.000
+HARD          8347.1    3086.6    3086.6      0.0    0.000    0.769
+RANDOM        9652.9    1780.8    1397.5     18.8    0.032    0.281
+RR            9508.3    1925.4    1633.0     19.4    0.024    0.326
+SUS          10631.8     801.8     546.8     19.2    0.021    0.121
+FLAG         10631.8     801.8     546.8     19.2    0.021    0.121
+BND          10631.8     801.8     546.8     19.2    0.021    0.121
+UNC          10388.6    1045.1     725.5     19.5    0.026    0.139
+TUNED-LIN    10386.1    1047.5     535.4     18.5    0.043    0.118
+VOI          10429.0    1004.6     611.2     18.3    0.033    0.127
+ORACLE       11433.7       0.0       0.0      0.0    0.000    0.000
+PRIMARY regret reduction vs SUS: -0.370  CI [-0.741, 0.063]  honest-ok True sybil-ok True -> FAIL-family
+relative net-utility improvement vs SUS: -0.0186  CI [-0.0408, 0.0089]   (old +5% criterion: not met)
+per-stream (regret_SUS -> regret_VOI, reduction):
+   camou_s201.json       661.6 ->   1039.3  -0.571   poison   519.5 ->   563.2   honestDrop 0.011 -> 0.040
+   camou_s202.json       486.5 ->    969.7  -0.993   poison   468.5 ->   605.9   honestDrop 0.000 -> 0.030
+   camou_s203.json      1004.7 ->    700.7  +0.303   poison   427.8 ->   558.9   honestDrop 0.049 -> 0.011
+   camou_s204.json      1088.6 ->   1101.8  -0.012   poison   677.9 ->   594.2   honestDrop 0.034 -> 0.043
+   camou_s205.json       767.7 ->   1211.8  -0.578   poison   640.1 ->   733.7   honestDrop 0.009 -> 0.040
+
+=== B=2  benign-community (n=10)  strongest rule: SUS  oracle headroom (regret/U of the rule): 0.058 ===
+policy         net U    regret    poison     cost honestDrop  sybKept
+ALL           6514.4    4912.3    4912.3      0.0    0.000    1.000
+HARD          9808.0    1618.7     197.0      0.0    0.125    0.040
+RANDOM       10647.7     779.1     295.4     18.6    0.041    0.060
+RR           10583.9     842.8     331.9     18.8    0.043    0.068
+SUS          10796.0     630.8     300.8     18.8    0.027    0.062
+FLAG         10788.0     638.7     306.8     18.7    0.028    0.063
+BND          10583.3     843.4     342.7     18.6    0.042    0.070
+UNC          10707.7     719.0     257.1     18.6    0.039    0.052
+TUNED-LIN    10658.0     768.7     256.8     18.1    0.043    0.052
+VOI          10761.7     665.0     206.7     18.0    0.039    0.042
+ORACLE       11426.7       0.0       0.0      0.0    0.000    0.000
+PRIMARY regret reduction vs SUS: -0.174  CI [-0.567, 0.205]  honest-ok True sybil-ok True -> INCONCLUSIVE-family
+relative net-utility improvement vs SUS: -0.0029  CI [-0.0223, 0.0169]   (old +5% criterion: not met)
+per-stream (regret_SUS -> regret_VOI, reduction):
+   bc10_s201.json        873.8 ->    539.5  +0.383   poison   497.9 ->   276.6   honestDrop 0.031 -> 0.022
+   bc10_s202.json        396.4 ->    446.1  -0.125   poison   125.1 ->    72.2   honestDrop 0.022 -> 0.031
+   bc10_s203.json        743.2 ->    191.8  +0.742   poison   406.4 ->    62.7   honestDrop 0.028 -> 0.009
+   bc10_s204.json        639.5 ->    525.7  +0.178   poison   313.0 ->   146.2   honestDrop 0.027 -> 0.032
+   bc10_s205.json        309.2 ->    708.7  -1.292   poison    59.4 ->   359.4   honestDrop 0.020 -> 0.029
+   bc20_s201.json       1062.6 ->   1127.4  -0.061   poison   696.7 ->   405.8   honestDrop 0.031 -> 0.062
+   bc20_s202.json        648.5 ->    522.2  +0.195   poison   296.9 ->    69.6   honestDrop 0.029 -> 0.038
+   bc20_s203.json        448.7 ->    924.1  -1.060   poison   108.9 ->    70.7   honestDrop 0.028 -> 0.073
+   bc20_s204.json        527.3 ->    457.8  +0.132   poison   259.3 ->   100.2   honestDrop 0.022 -> 0.030
+   bc20_s205.json        658.3 ->   1206.8  -0.833   poison   244.9 ->   503.4   honestDrop 0.035 -> 0.060
+
+PER-SEED mean regret reduction over all streams (B=2): {'201': -0.161, '202': -0.038, '203': -0.153, '204': 0.198, '205': -0.295}
+wrote results/lm4_per_stream_B2.csv

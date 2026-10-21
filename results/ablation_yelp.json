@@ -1,0 +1,16 @@
+[
+  {
+    "variant": "A5",
+    "attack_scenario": "static",
+    "sybil_f1": 0.5,
+    "precision": 0.3333,
+    "recall": 1.0,
+    "fp": 60,
+    "trust_sep": 0.1004,
+    "dp_epsilon": 0.3,
+    "privacy_utility": 0.7692,
+    "graph_quality": 0.9684,
+    "avg_reward": 249.43,
+    "detection_latency": 99
+  }
+]

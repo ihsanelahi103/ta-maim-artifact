@@ -1,0 +1,63 @@
+
+=== qmatch: n=5 seed runs; Sybils (of 30) whose rule ever fires: 30.0; median firing episodes 116, median longest run 31 ===
+P       ever   exact phase_avg  guaranteed phase_dep
+1       30.0    30.0      30.0        30.0       0.0
+2       30.0    30.0      30.0        30.0       0.0
+5       30.0    30.0      30.0        30.0       0.0
+10      30.0    30.0      30.0        30.0       0.0
+25      30.0    30.0      30.0        25.0       0.2
+50      30.0    30.0      29.4         2.6      13.2
+
+=== collude: n=5 seed runs; Sybils (of 30) whose rule ever fires: 30.0; median firing episodes 196, median longest run 196 ===
+P       ever   exact phase_avg  guaranteed phase_dep
+1       30.0    30.0      30.0        30.0       0.0
+2       30.0    30.0      30.0        30.0       0.0
+5       30.0    30.0      30.0        30.0       0.0
+10      30.0    30.0      30.0        30.0       0.0
+25      30.0    30.0      30.0        30.0       0.0
+50      30.0    30.0      30.0        30.0       0.0
+
+=== qm_ae10: n=5 seed runs; Sybils (of 30) whose rule ever fires: 30.0; median firing episodes 24, median longest run 10 ===
+P       ever   exact phase_avg  guaranteed phase_dep
+1       30.0    30.0      30.0        30.0       0.0
+2       30.0    30.0      29.9        29.8       0.2
+5       30.0    29.8      29.8        28.0       0.6
+10      30.0    27.0      28.0        15.8       8.0
+25      30.0    22.2      20.7         0.0      28.0
+50      30.0    15.6      12.0         0.0      30.0
+
+=== qm_l050: n=5 seed runs; Sybils (of 30) whose rule ever fires: 28.0; median firing episodes 8, median longest run 5 ===
+P       ever   exact phase_avg  guaranteed phase_dep
+1       28.0    28.0      28.0        28.0       0.0
+2       28.0    26.4      26.7        24.8       2.6
+5       28.0    22.0      22.9        15.6      10.6
+10      28.0    17.6      17.9         3.2      19.6
+25      28.0    11.0       9.8         0.0      27.8
+50      28.0     7.8       5.1         0.0      28.0
+
+=== camou: n=5 seed runs; Sybils (of 30) whose rule ever fires: 16.8; median firing episodes 6, median longest run 4 ===
+P       ever   exact phase_avg  guaranteed phase_dep
+1       16.8    16.8      16.8        16.8       0.0
+2       16.8    15.8      15.8        14.2       2.0
+5       16.8    12.4      12.9         8.2       8.0
+10      16.8    10.6      10.0         4.2      12.4
+25      16.8     7.2       5.8         0.2      16.6
+50      16.8     3.8       3.1         0.0      16.8
+
+=== bc10: n=5 seed runs; Sybils (of 30) whose rule ever fires: 30.0; median firing episodes 117, median longest run 31 ===
+P       ever   exact phase_avg  guaranteed phase_dep
+1       30.0    30.0      30.0        30.0       0.0
+2       30.0    30.0      30.0        30.0       0.0
+5       30.0    30.0      30.0        30.0       0.0
+10      30.0    30.0      30.0        30.0       0.0
+25      30.0    30.0      30.0        24.6       0.4
+50      30.0    30.0      29.4         2.8      12.4
+
+=== bc20: n=5 seed runs; Sybils (of 30) whose rule ever fires: 30.0; median firing episodes 118, median longest run 31 ===
+P       ever   exact phase_avg  guaranteed phase_dep
+1       30.0    30.0      30.0        30.0       0.0
+2       30.0    30.0      30.0        30.0       0.0
+5       30.0    30.0      30.0        30.0       0.0
+10      30.0    30.0      30.0        30.0       0.0
+25      30.0    30.0      30.0        24.0       0.4
+50      30.0    30.0      29.5         3.0      12.8

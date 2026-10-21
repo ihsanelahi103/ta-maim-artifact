@@ -1,0 +1,142 @@
+nohup: ignoring input
+lm3_run.py sha256: a8dead711d6b62da FIXED {'passes_lrn': 10, 'passes_dqn': 5, 'cem_iters': 8, 'cem_pop': 12, 'cem_streams': 8, 'dqn_steps_per_episode': 1}
+LEAK CHECK (features invariant to labels, verifier noise, current/future raw quality): True | rule view keys: ('E', 'S', 'C', 'SUS', 'latched', 'mq', 'sd')
+train streams {'quality-matching': 25, 'collusion': 5, 'camouflage': 5, 'benign-community': 10} | test streams {'quality-matching': 25, 'camouflage': 5, 'benign-community': 10}
+
+##### B=5 binding diagnostic (RANDOM): {'mean_eligible': 10.045, 'unresolved_50': 0.0, 'unresolved_100': 0.0, 'unresolved_E': 0.0, 'checks_per_contributor': 1.862}
+
+=== B=5  held-out family: quality-matching (n=25 fresh streams) ===
+policy         net U    poison      cost honestDrop   sybKept
+ALL           7414.7    4021.3       0.0     0.000     1.000
+HARD          9604.8    1824.8       0.0     0.001     0.554
+RANDOM       10634.2     388.6      18.8     0.035     0.099
+RR           10649.9     434.9      18.5     0.029     0.112
+SUS          10958.3     217.5      18.7     0.021     0.052
+FLAG         10940.4     212.8      18.8     0.023     0.051
+BND          10972.3     197.9      18.9     0.022     0.048
+UNC          10890.5     273.2      18.5     0.022     0.066
+TUNED-LIN    10806.3     242.0      18.9     0.032     0.060
+LRN-F        10725.1     336.4      18.8     0.031     0.086
+LRN-O        10649.8     439.9      18.6     0.029     0.113
+DDQN-F       10874.2     240.9      18.6     0.026     0.060
+DDQN-O       10850.5     239.9      18.6     0.029     0.060
+ORACLE       11436.1       0.0       0.0     0.000     0.000
+strongest rule: BND | headroom (ORACLE vs it) 0.042 | best rule vs RANDOM 0.032 | gate train: LRN 10767.4 DDQN 10745.5 RANDOM 10809.3
+  DDQN-F vs BND: rel -0.0082 CI [-0.0203, 0.0046] honest-ok True sybil-ok True -> NO-HEADROOM
+  LRN-F vs BND: rel -0.0218 CI [-0.0345, -0.0089] honest-ok True sybil-ok False -> NO-HEADROOM
+  DDQN-O vs BND: rel -0.0104 CI [-0.0220, 0.0012] honest-ok True sybil-ok True -> NO-HEADROOM
+  LRN-O vs BND: rel -0.0288 CI [-0.0407, -0.0164] honest-ok True sybil-ok False -> NO-HEADROOM
+
+=== B=5  held-out family: camouflage (n=5 fresh streams) ===
+policy         net U    poison      cost honestDrop   sybKept
+ALL           8409.7    3023.4       0.0     0.000     1.000
+HARD          8595.7    2805.1       0.0     0.003     0.672
+RANDOM       10404.1     623.5      18.2     0.034     0.138
+RR           10403.3     659.0      18.4     0.031     0.138
+SUS          10861.5     291.8      18.5     0.023     0.074
+FLAG         10861.5     291.8      18.5     0.023     0.074
+BND          10861.5     291.8      18.5     0.023     0.074
+UNC          10562.0     402.4      18.6     0.039     0.094
+TUNED-LIN    10834.3     283.9      18.2     0.026     0.079
+LRN-F        10562.6     505.3      18.3     0.030     0.104
+LRN-O        10473.6     583.9      18.2     0.031     0.121
+DDQN-F       10321.8     639.7      18.5     0.040     0.132
+DDQN-O       10382.6     636.4      18.7     0.035     0.130
+ORACLE       11433.1       0.0       0.0     0.000     0.000
+strongest rule: SUS | headroom (ORACLE vs it) 0.053 | best rule vs RANDOM 0.044 | gate train: LRN 10714.4 DDQN 10767.0 RANDOM 10789.3
+  DDQN-F vs SUS: rel -0.0496 CI [-0.0585, -0.0403] honest-ok True sybil-ok False -> FAIL-family
+  LRN-F vs SUS: rel -0.0275 CI [-0.0371, -0.0190] honest-ok True sybil-ok False -> FAIL-family
+  DDQN-O vs SUS: rel -0.0440 CI [-0.0524, -0.0318] honest-ok True sybil-ok False -> FAIL-family
+  LRN-O vs SUS: rel -0.0356 CI [-0.0481, -0.0208] honest-ok True sybil-ok False -> FAIL-family
+
+=== B=5  held-out family: benign-community (n=10 fresh streams) ===
+policy         net U    poison      cost honestDrop   sybKept
+ALL           6517.6    4923.5       0.0     0.000     1.000
+HARD          9982.5     182.0       0.0     0.111     0.037
+RANDOM       10892.1     197.3      18.5     0.029     0.040
+RR           10672.9     367.3      18.5     0.033     0.074
+SUS          10876.1     246.9      18.3     0.026     0.050
+FLAG         10874.6     280.2      18.3     0.023     0.057
+BND          10884.8     239.9      18.1     0.026     0.048
+UNC          10662.7     408.1      18.2     0.031     0.083
+TUNED-LIN    10886.9     243.1      19.1     0.026     0.049
+LRN-F        10780.6     295.0      18.9     0.030     0.060
+LRN-O        10749.5     278.0      18.4     0.035     0.056
+DDQN-F       10738.9     320.7      18.8     0.032     0.065
+DDQN-O       10769.6     308.7      18.8     0.030     0.062
+ORACLE       11441.1       0.0       0.0     0.000     0.000
+strongest rule: RANDOM | headroom (ORACLE vs it) 0.050 | best rule vs RANDOM 0.000 | gate train: LRN 10719.2 DDQN 10690.9 RANDOM 10700.5
+  DDQN-F vs RANDOM: rel -0.0138 CI [-0.0268, -0.0017] honest-ok True sybil-ok False -> FAIL-family
+  LRN-F vs RANDOM: rel -0.0100 CI [-0.0224, 0.0023] honest-ok True sybil-ok True -> FAIL-family
+  DDQN-O vs RANDOM: rel -0.0111 CI [-0.0209, -0.0014] honest-ok True sybil-ok False -> FAIL-family
+  LRN-O vs RANDOM: rel -0.0129 CI [-0.0253, 0.0004] honest-ok True sybil-ok True -> FAIL-family
+B=5: binding=False | sanity gate (DDQN-V beats RANDOM on training streams in every fold)=False | DDQN-F families passed: 0
+
+##### B=20 binding diagnostic (RANDOM): {'mean_eligible': 2.758, 'unresolved_50': 0.0, 'unresolved_100': 0.0, 'unresolved_E': 0.0, 'checks_per_contributor': 1.871}
+
+=== B=20  held-out family: quality-matching (n=25 fresh streams) ===
+policy         net U    poison      cost honestDrop   sybKept
+ALL           7414.7    4021.3       0.0     0.000     1.000
+HARD          9604.8    1824.8       0.0     0.001     0.554
+RANDOM       10876.3     202.7      19.1     0.030     0.051
+RR           10888.1     183.8      18.7     0.030     0.049
+SUS          10803.3     182.7      18.9     0.038     0.045
+FLAG         10803.3     182.7      18.9     0.038     0.045
+BND          10803.3     182.7      18.9     0.038     0.045
+UNC          10913.2     197.6      18.7     0.027     0.051
+TUNED-LIN    10973.6     176.5      18.3     0.023     0.044
+LRN-F        10853.1     208.6      18.7     0.031     0.053
+LRN-O        10802.0     238.3      18.9     0.033     0.059
+DDQN-F       10880.4     207.9      18.7     0.029     0.050
+DDQN-O       10894.6     194.8      18.7     0.029     0.048
+ORACLE       11436.1       0.0       0.0     0.000     0.000
+strongest rule: TUNED-LIN | headroom (ORACLE vs it) 0.042 | best rule vs RANDOM 0.009 | gate train: LRN 10857.8 DDQN 10810.8 RANDOM 10859.7
+  DDQN-F vs TUNED-LIN: rel -0.0081 CI [-0.0169, 0.0014] honest-ok True sybil-ok True -> NO-HEADROOM
+  LRN-F vs TUNED-LIN: rel -0.0105 CI [-0.0192, -0.0021] honest-ok True sybil-ok True -> NO-HEADROOM
+  DDQN-O vs TUNED-LIN: rel -0.0068 CI [-0.0166, 0.0035] honest-ok True sybil-ok True -> NO-HEADROOM
+  LRN-O vs TUNED-LIN: rel -0.0152 CI [-0.0245, -0.0055] honest-ok True sybil-ok True -> NO-HEADROOM
+
+=== B=20  held-out family: camouflage (n=5 fresh streams) ===
+policy         net U    poison      cost honestDrop   sybKept
+ALL           8409.7    3023.4       0.0     0.000     1.000
+HARD          8595.7    2805.1       0.0     0.003     0.672
+RANDOM       10938.1     283.4      19.2     0.017     0.075
+RR           10816.1     247.6      18.3     0.031     0.068
+SUS          10938.6     125.4      19.5     0.031     0.033
+FLAG         10938.6     125.4      19.5     0.031     0.033
+BND          10938.6     125.4      19.5     0.031     0.033
+UNC          10934.0     192.2      19.1     0.025     0.051
+TUNED-LIN    10671.2     325.8      18.7     0.037     0.096
+LRN-F        10766.8     219.3      19.4     0.037     0.060
+LRN-O        10822.9     271.8      18.7     0.028     0.073
+DDQN-F       10741.1     332.8      18.7     0.030     0.087
+DDQN-O       10762.9     336.5      19.0     0.028     0.087
+ORACLE       11433.1       0.0       0.0     0.000     0.000
+strongest rule: SUS | headroom (ORACLE vs it) 0.045 | best rule vs RANDOM 0.000 | gate train: LRN 10819.2 DDQN 10800.7 RANDOM 10851.6
+  DDQN-F vs SUS: rel -0.0179 CI [-0.0319, -0.0041] honest-ok True sybil-ok False -> NO-HEADROOM
+  LRN-F vs SUS: rel -0.0157 CI [-0.0301, 0.0004] honest-ok True sybil-ok False -> NO-HEADROOM
+  DDQN-O vs SUS: rel -0.0158 CI [-0.0287, -0.0030] honest-ok True sybil-ok False -> NO-HEADROOM
+  LRN-O vs SUS: rel -0.0102 CI [-0.0300, 0.0072] honest-ok True sybil-ok False -> NO-HEADROOM
+
+=== B=20  held-out family: benign-community (n=10 fresh streams) ===
+policy         net U    poison      cost honestDrop   sybKept
+ALL           6517.6    4923.5       0.0     0.000     1.000
+HARD          9982.5     182.0       0.0     0.111     0.037
+RANDOM       10813.9     238.3      18.8     0.032     0.048
+RR           10807.4     225.7      19.4     0.034     0.046
+SUS          10734.9     273.0      18.4     0.036     0.055
+FLAG         10734.9     273.0      18.4     0.036     0.055
+BND          10734.9     273.0      18.4     0.036     0.055
+UNC          10881.5     220.3      18.9     0.028     0.045
+TUNED-LIN    10901.5     196.9      18.8     0.028     0.040
+LRN-F        10780.7     227.6      18.6     0.036     0.046
+LRN-O        10842.2     256.1      18.9     0.028     0.052
+DDQN-F       10855.7     231.2      18.8     0.029     0.047
+DDQN-O       10876.6     236.2      18.7     0.027     0.048
+ORACLE       11441.1       0.0       0.0     0.000     0.000
+strongest rule: TUNED-LIN | headroom (ORACLE vs it) 0.049 | best rule vs RANDOM 0.008 | gate train: LRN 10810.0 DDQN 10813.2 RANDOM 10863.8
+  DDQN-F vs TUNED-LIN: rel -0.0037 CI [-0.0174, 0.0096] honest-ok True sybil-ok True -> NO-HEADROOM
+  LRN-F vs TUNED-LIN: rel -0.0107 CI [-0.0226, 0.0018] honest-ok True sybil-ok True -> NO-HEADROOM
+  DDQN-O vs TUNED-LIN: rel -0.0018 CI [-0.0169, 0.0132] honest-ok True sybil-ok True -> NO-HEADROOM
+  LRN-O vs TUNED-LIN: rel -0.0048 CI [-0.0211, 0.0113] honest-ok True sybil-ok True -> NO-HEADROOM
+B=20: binding=False | sanity gate (DDQN-V beats RANDOM on training streams in every fold)=False | DDQN-F families passed: 0

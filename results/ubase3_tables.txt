@@ -1,0 +1,148 @@
+
+########## YELP seeds [7, 11, 42, 99, 123] rows 2080
+
+===== YELP HEADLINE c=1,3 =====
+identical c=1  ep=75  | fedavg 0.1613 | krum 0.1178 | multikrum 0.1753 | normclip 0.1929 | median 0.1810 | foolsgold 0.1808 | TA-MAIM 0.1710 | oracle 0.1808
+    TA-MAIM minus: fedavg +0.0097[+0.0012,+0.0183] WIN  ; krum +0.0532[+0.0423,+0.0642] WIN  ; multikrum -0.0043[-0.0128,+0.0043] tie  ; normclip -0.0219[-0.0400,-0.0037] LOSS ; median -0.0100[-0.0157,-0.0042] LOSS ; foolsgold -0.0098[-0.0186,-0.0010] LOSS ; oracle -0.0098[-0.0186,-0.0010] LOSS
+identical c=1  ep=200 | fedavg 0.1385 | krum 0.1178 | multikrum 0.1587 | normclip 0.1581 | median 0.1779 | foolsgold 0.1808 | TA-MAIM 0.1808 | oracle 0.1808
+    TA-MAIM minus: fedavg +0.0424[+0.0347,+0.0500] WIN  ; krum +0.0630[+0.0471,+0.0790] WIN  ; multikrum +0.0221[+0.0048,+0.0394] WIN  ; normclip +0.0227[+0.0108,+0.0346] WIN  ; median +0.0029[-0.0013,+0.0072] tie  ; foolsgold +0.0000[+0.0000,+0.0000] tie  ; oracle +0.0000[+0.0000,+0.0000] tie 
+identical c=3  ep=75  | fedavg 0.1375 | krum 0.1178 | multikrum 0.1443 | normclip 0.1628 | median 0.1757 | foolsgold 0.1808 | TA-MAIM 0.1480 | oracle 0.1808
+    TA-MAIM minus: fedavg +0.0105[+0.0009,+0.0201] WIN  ; krum +0.0302[+0.0242,+0.0362] WIN  ; multikrum +0.0037[-0.0049,+0.0123] tie  ; normclip -0.0148[-0.0293,-0.0002] LOSS ; median -0.0277[-0.0400,-0.0154] LOSS ; foolsgold -0.0328[-0.0463,-0.0194] LOSS ; oracle -0.0328[-0.0463,-0.0194] LOSS
+identical c=3  ep=200 | fedavg 0.1275 | krum 0.1178 | multikrum 0.1489 | normclip 0.1311 | median 0.1664 | foolsgold 0.1808 | TA-MAIM 0.1808 | oracle 0.1808
+    TA-MAIM minus: fedavg +0.0533[+0.0450,+0.0617] WIN  ; krum +0.0630[+0.0471,+0.0790] WIN  ; multikrum +0.0319[+0.0117,+0.0521] WIN  ; normclip +0.0497[+0.0392,+0.0603] WIN  ; median +0.0145[+0.0076,+0.0213] WIN  ; foolsgold +0.0000[+0.0000,+0.0000] tie  ; oracle +0.0000[+0.0000,+0.0000] tie 
+diverse   c=1  ep=75  | fedavg 0.1769 | krum 0.1178 | multikrum 0.2060 | normclip 0.2090 | median 0.1719 | foolsgold 0.1769 | TA-MAIM 0.1799 | oracle 0.1808
+    TA-MAIM minus: fedavg +0.0030[-0.0012,+0.0072] tie  ; krum +0.0621[+0.0487,+0.0755] WIN  ; multikrum -0.0261[-0.0419,-0.0103] LOSS ; normclip -0.0291[-0.0399,-0.0183] LOSS ; median +0.0080[-0.0027,+0.0186] tie  ; foolsgold +0.0030[-0.0012,+0.0072] tie  ; oracle -0.0009[-0.0060,+0.0041] tie 
+diverse   c=1  ep=200 | fedavg 0.1635 | krum 0.1178 | multikrum 0.1784 | normclip 0.1793 | median 0.1593 | foolsgold 0.1635 | TA-MAIM 0.1808 | oracle 0.1808
+    TA-MAIM minus: fedavg +0.0173[+0.0097,+0.0250] WIN  ; krum +0.0630[+0.0471,+0.0790] WIN  ; multikrum +0.0024[-0.0202,+0.0250] tie  ; normclip +0.0016[-0.0040,+0.0071] tie  ; median +0.0215[+0.0097,+0.0332] WIN  ; foolsgold +0.0173[+0.0097,+0.0250] WIN  ; oracle +0.0000[+0.0000,+0.0000] tie 
+diverse   c=3  ep=75  | fedavg 0.1604 | krum 0.1178 | multikrum 0.1729 | normclip 0.1945 | median 0.1718 | foolsgold 0.1604 | TA-MAIM 0.1719 | oracle 0.1808
+    TA-MAIM minus: fedavg +0.0115[+0.0041,+0.0189] WIN  ; krum +0.0541[+0.0447,+0.0635] WIN  ; multikrum -0.0010[-0.0096,+0.0075] tie  ; normclip -0.0226[-0.0365,-0.0087] LOSS ; median +0.0001[-0.0082,+0.0084] tie  ; foolsgold +0.0115[+0.0041,+0.0189] WIN  ; oracle -0.0089[-0.0184,+0.0005] tie 
+diverse   c=3  ep=200 | fedavg 0.1393 | krum 0.1178 | multikrum 0.1578 | normclip 0.1475 | median 0.1557 | foolsgold 0.1393 | TA-MAIM 0.1808 | oracle 0.1808
+    TA-MAIM minus: fedavg +0.0415[+0.0315,+0.0515] WIN  ; krum +0.0630[+0.0471,+0.0790] WIN  ; multikrum +0.0230[+0.0009,+0.0451] WIN  ; normclip +0.0333[+0.0221,+0.0445] WIN  ; median +0.0252[+0.0134,+0.0369] WIN  ; foolsgold +0.0415[+0.0315,+0.0515] WIN  ; oracle +0.0000[+0.0000,+0.0000] tie 
+
+===== YELP SENSITIVITY c=6,10 =====
+identical c=6  ep=75  | fedavg 0.1326 | krum 0.1178 | multikrum 0.1506 | normclip 0.1534 | median 0.1645 | foolsgold 0.1808 | TA-MAIM 0.1379 | oracle 0.1808
+    TA-MAIM minus: fedavg +0.0054[+0.0008,+0.0100] WIN  ; krum +0.0201[+0.0123,+0.0280] WIN  ; multikrum -0.0126[-0.0370,+0.0117] tie  ; normclip -0.0154[-0.0265,-0.0044] LOSS ; median -0.0265[-0.0368,-0.0163] LOSS ; foolsgold -0.0429[-0.0523,-0.0335] LOSS ; oracle -0.0429[-0.0523,-0.0335] LOSS
+identical c=6  ep=200 | fedavg 0.1226 | krum 0.1178 | multikrum 0.1342 | normclip 0.1277 | median 0.1504 | foolsgold 0.1808 | TA-MAIM 0.1808 | oracle 0.1808
+    TA-MAIM minus: fedavg +0.0582[+0.0479,+0.0686] WIN  ; krum +0.0630[+0.0471,+0.0790] WIN  ; multikrum +0.0467[+0.0307,+0.0626] WIN  ; normclip +0.0532[+0.0417,+0.0646] WIN  ; median +0.0304[+0.0197,+0.0411] WIN  ; foolsgold +0.0000[+0.0000,+0.0000] tie  ; oracle +0.0000[+0.0000,+0.0000] tie 
+identical c=10 ep=75  | fedavg 0.1276 | krum 0.1178 | multikrum 0.1576 | normclip 0.1450 | median 0.1529 | foolsgold 0.1808 | TA-MAIM 0.1315 | oracle 0.1808
+    TA-MAIM minus: fedavg +0.0039[-0.0009,+0.0087] tie  ; krum +0.0137[+0.0068,+0.0207] WIN  ; multikrum -0.0261[-0.0594,+0.0072] tie  ; normclip -0.0135[-0.0187,-0.0083] LOSS ; median -0.0214[-0.0314,-0.0114] LOSS ; foolsgold -0.0493[-0.0603,-0.0384] LOSS ; oracle -0.0493[-0.0603,-0.0384] LOSS
+identical c=10 ep=200 | fedavg 0.1184 | krum 0.1178 | multikrum 0.1219 | normclip 0.1213 | median 0.1385 | foolsgold 0.1808 | TA-MAIM 0.1808 | oracle 0.1808
+    TA-MAIM minus: fedavg +0.0624[+0.0520,+0.0729] WIN  ; krum +0.0630[+0.0471,+0.0790] WIN  ; multikrum +0.0590[+0.0391,+0.0789] WIN  ; normclip +0.0595[+0.0480,+0.0710] WIN  ; median +0.0423[+0.0300,+0.0546] WIN  ; foolsgold +0.0000[+0.0000,+0.0000] tie  ; oracle +0.0000[+0.0000,+0.0000] tie 
+diverse   c=6  ep=75  | fedavg 0.1476 | krum 0.1178 | multikrum 0.1513 | normclip 0.1783 | median 0.1605 | foolsgold 0.1476 | TA-MAIM 0.1594 | oracle 0.1808
+    TA-MAIM minus: fedavg +0.0118[-0.0001,+0.0237] tie  ; krum +0.0416[+0.0332,+0.0501] WIN  ; multikrum +0.0081[+0.0010,+0.0152] WIN  ; normclip -0.0189[-0.0377,-0.0001] LOSS ; median -0.0011[-0.0082,+0.0060] tie  ; foolsgold +0.0118[-0.0001,+0.0237] tie  ; oracle -0.0214[-0.0318,-0.0110] LOSS
+diverse   c=6  ep=200 | fedavg 0.1308 | krum 0.1178 | multikrum 0.1466 | normclip 0.1399 | median 0.1420 | foolsgold 0.1308 | TA-MAIM 0.1808 | oracle 0.1808
+    TA-MAIM minus: fedavg +0.0500[+0.0385,+0.0616] WIN  ; krum +0.0630[+0.0471,+0.0790] WIN  ; multikrum +0.0342[+0.0148,+0.0537] WIN  ; normclip +0.0409[+0.0299,+0.0519] WIN  ; median +0.0389[+0.0282,+0.0495] WIN  ; foolsgold +0.0500[+0.0385,+0.0616] WIN  ; oracle +0.0000[+0.0000,+0.0000] tie 
+diverse   c=10 ep=75  | fedavg 0.1406 | krum 0.1178 | multikrum 0.1563 | normclip 0.1677 | median 0.1516 | foolsgold 0.1405 | TA-MAIM 0.1495 | oracle 0.1808
+    TA-MAIM minus: fedavg +0.0089[+0.0010,+0.0168] WIN  ; krum +0.0317[+0.0269,+0.0365] WIN  ; multikrum -0.0068[-0.0176,+0.0040] tie  ; normclip -0.0182[-0.0344,-0.0020] LOSS ; median -0.0021[-0.0060,+0.0018] tie  ; foolsgold +0.0090[+0.0014,+0.0167] WIN  ; oracle -0.0313[-0.0453,-0.0173] LOSS
+diverse   c=10 ep=200 | fedavg 0.1260 | krum 0.1178 | multikrum 0.1425 | normclip 0.1360 | median 0.1337 | foolsgold 0.1260 | TA-MAIM 0.1808 | oracle 0.1808
+    TA-MAIM minus: fedavg +0.0549[+0.0452,+0.0646] WIN  ; krum +0.0630[+0.0471,+0.0790] WIN  ; multikrum +0.0383[+0.0200,+0.0566] WIN  ; normclip +0.0449[+0.0344,+0.0554] WIN  ; median +0.0472[+0.0301,+0.0642] WIN  ; foolsgold +0.0549[+0.0452,+0.0646] WIN  ; oracle +0.0000[+0.0000,+0.0000] tie 
+
+===== YELP DIAGNOSTICS (ep=200; mean NDCG; paired diff vs oracle) =====
+identical c=1  | oracle 0.1808 ; median_nosybil +0.0000[+0.0000,+0.0000] ; normclip_nosybil +0.0456[+0.0405,+0.0506] ; foolsgold_nosybil +0.0000[+0.0000,+0.0000]
+identical c=3  | oracle 0.1808 ; median_nosybil +0.0000[+0.0000,+0.0000] ; normclip_nosybil +0.0456[+0.0405,+0.0506] ; foolsgold_nosybil +0.0000[+0.0000,+0.0000]
+identical c=6  | oracle 0.1808 ; median_nosybil +0.0000[+0.0000,+0.0000] ; normclip_nosybil +0.0456[+0.0405,+0.0506] ; foolsgold_nosybil +0.0000[+0.0000,+0.0000]
+identical c=10 | oracle 0.1808 ; median_nosybil +0.0000[+0.0000,+0.0000] ; normclip_nosybil +0.0456[+0.0405,+0.0506] ; foolsgold_nosybil +0.0000[+0.0000,+0.0000]
+diverse   c=1  | oracle 0.1808 ; median_nosybil +0.0000[+0.0000,+0.0000] ; normclip_nosybil +0.0456[+0.0405,+0.0506] ; foolsgold_nosybil +0.0000[+0.0000,+0.0000]
+diverse   c=3  | oracle 0.1808 ; median_nosybil +0.0000[+0.0000,+0.0000] ; normclip_nosybil +0.0456[+0.0405,+0.0506] ; foolsgold_nosybil +0.0000[+0.0000,+0.0000]
+diverse   c=6  | oracle 0.1808 ; median_nosybil +0.0000[+0.0000,+0.0000] ; normclip_nosybil +0.0456[+0.0405,+0.0506] ; foolsgold_nosybil +0.0000[+0.0000,+0.0000]
+diverse   c=10 | oracle 0.1808 ; median_nosybil +0.0000[+0.0000,+0.0000] ; normclip_nosybil +0.0456[+0.0405,+0.0506] ; foolsgold_nosybil +0.0000[+0.0000,+0.0000]
+
+===== YELP COMBINATIONS (ep=200; paired diff) =====
+identical c=1 
+    TA-MAIM+median mean 0.1808 | minus TA-MAIM +0.0000[+0.0000,+0.0000] | minus median +0.0029[-0.0013,+0.0072]
+    TA-MAIM+normclip mean 0.2264 | minus TA-MAIM +0.0456[+0.0405,+0.0506] | minus normclip +0.0682[+0.0573,+0.0792]
+identical c=3 
+    TA-MAIM+median mean 0.1808 | minus TA-MAIM +0.0000[+0.0000,+0.0000] | minus median +0.0145[+0.0076,+0.0213]
+    TA-MAIM+normclip mean 0.2264 | minus TA-MAIM +0.0456[+0.0405,+0.0506] | minus normclip +0.0953[+0.0839,+0.1067]
+identical c=6 
+    TA-MAIM+median mean 0.1808 | minus TA-MAIM +0.0000[+0.0000,+0.0000] | minus median +0.0304[+0.0197,+0.0411]
+    TA-MAIM+normclip mean 0.2264 | minus TA-MAIM +0.0456[+0.0405,+0.0506] | minus normclip +0.0987[+0.0855,+0.1120]
+identical c=10
+    TA-MAIM+median mean 0.1808 | minus TA-MAIM +0.0000[+0.0000,+0.0000] | minus median +0.0423[+0.0300,+0.0546]
+    TA-MAIM+normclip mean 0.2264 | minus TA-MAIM +0.0456[+0.0405,+0.0506] | minus normclip +0.1051[+0.0921,+0.1180]
+diverse   c=1 
+    TA-MAIM+median mean 0.1808 | minus TA-MAIM +0.0000[+0.0000,+0.0000] | minus median +0.0215[+0.0097,+0.0332]
+    TA-MAIM+normclip mean 0.2264 | minus TA-MAIM +0.0456[+0.0405,+0.0506] | minus normclip +0.0471[+0.0454,+0.0488]
+diverse   c=3 
+    TA-MAIM+median mean 0.1808 | minus TA-MAIM +0.0000[+0.0000,+0.0000] | minus median +0.0252[+0.0134,+0.0369]
+    TA-MAIM+normclip mean 0.2264 | minus TA-MAIM +0.0456[+0.0405,+0.0506] | minus normclip +0.0788[+0.0701,+0.0875]
+diverse   c=6 
+    TA-MAIM+median mean 0.1808 | minus TA-MAIM +0.0000[+0.0000,+0.0000] | minus median +0.0389[+0.0282,+0.0495]
+    TA-MAIM+normclip mean 0.2264 | minus TA-MAIM +0.0456[+0.0405,+0.0506] | minus normclip +0.0864[+0.0770,+0.0958]
+diverse   c=10
+    TA-MAIM+median mean 0.1808 | minus TA-MAIM +0.0000[+0.0000,+0.0000] | minus median +0.0472[+0.0301,+0.0642]
+    TA-MAIM+normclip mean 0.2264 | minus TA-MAIM +0.0456[+0.0405,+0.0506] | minus normclip +0.0904[+0.0807,+0.1001]
+
+########## AMAZON seeds [7, 11, 42, 99, 123] rows 2080
+
+===== AMAZON HEADLINE c=1,3 =====
+identical c=1  ep=75  | fedavg 0.1503 | krum 0.0959 | multikrum 0.1505 | normclip 0.1724 | median 0.1699 | foolsgold 0.1091 | TA-MAIM 0.1543 | oracle 0.1557
+    TA-MAIM minus: fedavg +0.0040[-0.0015,+0.0096] tie  ; krum +0.0584[+0.0397,+0.0770] WIN  ; multikrum +0.0038[-0.0122,+0.0198] tie  ; normclip -0.0181[-0.0275,-0.0086] LOSS ; median -0.0156[-0.0224,-0.0088] LOSS ; foolsgold +0.0451[+0.0283,+0.0620] WIN  ; oracle -0.0014[-0.0075,+0.0048] tie 
+identical c=1  ep=200 | fedavg 0.1446 | krum 0.0959 | multikrum 0.1742 | normclip 0.1863 | median 0.1693 | foolsgold 0.1091 | TA-MAIM 0.1557 | oracle 0.1557
+    TA-MAIM minus: fedavg +0.0111[+0.0010,+0.0212] WIN  ; krum +0.0598[+0.0384,+0.0811] WIN  ; multikrum -0.0185[-0.0440,+0.0070] tie  ; normclip -0.0306[-0.0418,-0.0195] LOSS ; median -0.0136[-0.0212,-0.0061] LOSS ; foolsgold +0.0465[+0.0282,+0.0649] WIN  ; oracle +0.0000[+0.0000,+0.0000] tie 
+identical c=3  ep=75  | fedavg 0.1447 | krum 0.0959 | multikrum 0.1453 | normclip 0.1659 | median 0.1649 | foolsgold 0.1091 | TA-MAIM 0.1476 | oracle 0.1557
+    TA-MAIM minus: fedavg +0.0029[+0.0004,+0.0055] WIN  ; krum +0.0517[+0.0330,+0.0704] WIN  ; multikrum +0.0023[-0.0089,+0.0135] tie  ; normclip -0.0183[-0.0267,-0.0098] LOSS ; median -0.0172[-0.0252,-0.0092] LOSS ; foolsgold +0.0385[+0.0207,+0.0563] WIN  ; oracle -0.0080[-0.0171,+0.0011] tie 
+identical c=3  ep=200 | fedavg 0.1429 | krum 0.0959 | multikrum 0.1671 | normclip 0.1622 | median 0.1627 | foolsgold 0.1091 | TA-MAIM 0.1557 | oracle 0.1557
+    TA-MAIM minus: fedavg +0.0128[+0.0019,+0.0236] WIN  ; krum +0.0598[+0.0384,+0.0811] WIN  ; multikrum -0.0114[-0.0357,+0.0129] tie  ; normclip -0.0065[-0.0168,+0.0038] tie  ; median -0.0070[-0.0180,+0.0040] tie  ; foolsgold +0.0465[+0.0282,+0.0649] WIN  ; oracle +0.0000[+0.0000,+0.0000] tie 
+diverse   c=1  ep=75  | fedavg 0.1531 | krum 0.0959 | multikrum 0.1562 | normclip 0.1779 | median 0.1713 | foolsgold 0.1035 | TA-MAIM 0.1544 | oracle 0.1557
+    TA-MAIM minus: fedavg +0.0013[-0.0033,+0.0059] tie  ; krum +0.0585[+0.0348,+0.0822] WIN  ; multikrum -0.0018[-0.0123,+0.0087] tie  ; normclip -0.0234[-0.0336,-0.0133] LOSS ; median -0.0169[-0.0268,-0.0070] LOSS ; foolsgold +0.0509[+0.0221,+0.0798] WIN  ; oracle -0.0013[-0.0067,+0.0042] tie 
+diverse   c=1  ep=200 | fedavg 0.1506 | krum 0.0959 | multikrum 0.1694 | normclip 0.1742 | median 0.1726 | foolsgold 0.1052 | TA-MAIM 0.1557 | oracle 0.1557
+    TA-MAIM minus: fedavg +0.0051[-0.0091,+0.0193] tie  ; krum +0.0598[+0.0384,+0.0811] WIN  ; multikrum -0.0137[-0.0398,+0.0124] tie  ; normclip -0.0185[-0.0374,+0.0003] tie  ; median -0.0169[-0.0304,-0.0034] LOSS ; foolsgold +0.0505[+0.0172,+0.0837] WIN  ; oracle +0.0000[+0.0000,+0.0000] tie 
+diverse   c=3  ep=75  | fedavg 0.1515 | krum 0.0959 | multikrum 0.1540 | normclip 0.1704 | median 0.1677 | foolsgold 0.1023 | TA-MAIM 0.1548 | oracle 0.1557
+    TA-MAIM minus: fedavg +0.0033[-0.0033,+0.0099] tie  ; krum +0.0589[+0.0367,+0.0811] WIN  ; multikrum +0.0008[-0.0103,+0.0118] tie  ; normclip -0.0156[-0.0253,-0.0059] LOSS ; median -0.0129[-0.0252,-0.0005] LOSS ; foolsgold +0.0525[+0.0277,+0.0773] WIN  ; oracle -0.0009[-0.0107,+0.0089] tie 
+diverse   c=3  ep=200 | fedavg 0.1454 | krum 0.0959 | multikrum 0.1651 | normclip 0.1658 | median 0.1680 | foolsgold 0.1039 | TA-MAIM 0.1557 | oracle 0.1557
+    TA-MAIM minus: fedavg +0.0103[-0.0063,+0.0270] tie  ; krum +0.0598[+0.0384,+0.0811] WIN  ; multikrum -0.0094[-0.0320,+0.0132] tie  ; normclip -0.0101[-0.0292,+0.0090] tie  ; median -0.0123[-0.0308,+0.0062] tie  ; foolsgold +0.0517[+0.0181,+0.0854] WIN  ; oracle +0.0000[+0.0000,+0.0000] tie 
+
+===== AMAZON SENSITIVITY c=6,10 =====
+identical c=6  ep=75  | fedavg 0.1428 | krum 0.0959 | multikrum 0.1420 | normclip 0.1570 | median 0.1605 | foolsgold 0.1091 | TA-MAIM 0.1441 | oracle 0.1557
+    TA-MAIM minus: fedavg +0.0014[-0.0014,+0.0041] tie  ; krum +0.0482[+0.0291,+0.0674] WIN  ; multikrum +0.0021[-0.0103,+0.0145] tie  ; normclip -0.0128[-0.0165,-0.0091] LOSS ; median -0.0164[-0.0287,-0.0041] LOSS ; foolsgold +0.0350[+0.0166,+0.0534] WIN  ; oracle -0.0115[-0.0216,-0.0015] LOSS
+identical c=6  ep=200 | fedavg 0.1380 | krum 0.0959 | multikrum 0.1594 | normclip 0.1509 | median 0.1610 | foolsgold 0.1091 | TA-MAIM 0.1557 | oracle 0.1557
+    TA-MAIM minus: fedavg +0.0177[+0.0044,+0.0310] WIN  ; krum +0.0598[+0.0384,+0.0811] WIN  ; multikrum -0.0038[-0.0273,+0.0198] tie  ; normclip +0.0047[-0.0100,+0.0194] tie  ; median -0.0053[-0.0217,+0.0110] tie  ; foolsgold +0.0465[+0.0282,+0.0649] WIN  ; oracle +0.0000[+0.0000,+0.0000] tie 
+identical c=10 ep=75  | fedavg 0.1424 | krum 0.0959 | multikrum 0.1403 | normclip 0.1526 | median 0.1567 | foolsgold 0.1091 | TA-MAIM 0.1429 | oracle 0.1557
+    TA-MAIM minus: fedavg +0.0005[-0.0007,+0.0017] tie  ; krum +0.0470[+0.0280,+0.0660] WIN  ; multikrum +0.0026[-0.0121,+0.0173] tie  ; normclip -0.0097[-0.0126,-0.0068] LOSS ; median -0.0137[-0.0223,-0.0052] LOSS ; foolsgold +0.0338[+0.0153,+0.0523] WIN  ; oracle -0.0127[-0.0235,-0.0020] LOSS
+identical c=10 ep=200 | fedavg 0.1292 | krum 0.0959 | multikrum 0.1566 | normclip 0.1362 | median 0.1517 | foolsgold 0.1091 | TA-MAIM 0.1557 | oracle 0.1557
+    TA-MAIM minus: fedavg +0.0265[+0.0070,+0.0461] WIN  ; krum +0.0598[+0.0384,+0.0811] WIN  ; multikrum -0.0009[-0.0233,+0.0215] tie  ; normclip +0.0194[+0.0018,+0.0370] WIN  ; median +0.0040[-0.0136,+0.0216] tie  ; foolsgold +0.0465[+0.0282,+0.0649] WIN  ; oracle +0.0000[+0.0000,+0.0000] tie 
+diverse   c=6  ep=75  | fedavg 0.1474 | krum 0.0959 | multikrum 0.1474 | normclip 0.1642 | median 0.1651 | foolsgold 0.1017 | TA-MAIM 0.1510 | oracle 0.1557
+    TA-MAIM minus: fedavg +0.0036[-0.0037,+0.0110] tie  ; krum +0.0551[+0.0357,+0.0745] WIN  ; multikrum +0.0036[-0.0106,+0.0178] tie  ; normclip -0.0132[-0.0217,-0.0046] LOSS ; median -0.0141[-0.0292,+0.0010] tie  ; foolsgold +0.0493[+0.0271,+0.0716] WIN  ; oracle -0.0047[-0.0142,+0.0049] tie 
+diverse   c=6  ep=200 | fedavg 0.1430 | krum 0.0959 | multikrum 0.1635 | normclip 0.1598 | median 0.1647 | foolsgold 0.1036 | TA-MAIM 0.1557 | oracle 0.1557
+    TA-MAIM minus: fedavg +0.0126[-0.0029,+0.0282] tie  ; krum +0.0598[+0.0384,+0.0811] WIN  ; multikrum -0.0078[-0.0304,+0.0148] tie  ; normclip -0.0041[-0.0208,+0.0126] tie  ; median -0.0091[-0.0337,+0.0156] tie  ; foolsgold +0.0521[+0.0175,+0.0868] WIN  ; oracle +0.0000[+0.0000,+0.0000] tie 
+diverse   c=10 ep=75  | fedavg 0.1446 | krum 0.0959 | multikrum 0.1456 | normclip 0.1600 | median 0.1610 | foolsgold 0.1010 | TA-MAIM 0.1480 | oracle 0.1557
+    TA-MAIM minus: fedavg +0.0034[-0.0035,+0.0103] tie  ; krum +0.0521[+0.0328,+0.0714] WIN  ; multikrum +0.0024[-0.0110,+0.0158] tie  ; normclip -0.0120[-0.0206,-0.0035] LOSS ; median -0.0130[-0.0261,+0.0002] tie  ; foolsgold +0.0470[+0.0260,+0.0680] WIN  ; oracle -0.0077[-0.0182,+0.0028] tie 
+diverse   c=10 ep=200 | fedavg 0.1419 | krum 0.0959 | multikrum 0.1593 | normclip 0.1560 | median 0.1605 | foolsgold 0.1029 | TA-MAIM 0.1557 | oracle 0.1557
+    TA-MAIM minus: fedavg +0.0138[-0.0027,+0.0302] tie  ; krum +0.0598[+0.0384,+0.0811] WIN  ; multikrum -0.0036[-0.0252,+0.0181] tie  ; normclip -0.0003[-0.0170,+0.0164] tie  ; median -0.0049[-0.0293,+0.0196] tie  ; foolsgold +0.0527[+0.0189,+0.0866] WIN  ; oracle +0.0000[+0.0000,+0.0000] tie 
+
+===== AMAZON DIAGNOSTICS (ep=200; mean NDCG; paired diff vs oracle) =====
+identical c=1  | oracle 0.1557 ; median_nosybil +0.0145[+0.0072,+0.0219] ; normclip_nosybil +0.0185[+0.0153,+0.0216] ; foolsgold_nosybil -0.0465[-0.0649,-0.0282]
+identical c=3  | oracle 0.1557 ; median_nosybil +0.0145[+0.0072,+0.0219] ; normclip_nosybil +0.0185[+0.0153,+0.0216] ; foolsgold_nosybil -0.0465[-0.0649,-0.0282]
+identical c=6  | oracle 0.1557 ; median_nosybil +0.0145[+0.0072,+0.0219] ; normclip_nosybil +0.0185[+0.0153,+0.0216] ; foolsgold_nosybil -0.0465[-0.0649,-0.0282]
+identical c=10 | oracle 0.1557 ; median_nosybil +0.0145[+0.0072,+0.0219] ; normclip_nosybil +0.0185[+0.0153,+0.0216] ; foolsgold_nosybil -0.0465[-0.0649,-0.0282]
+diverse   c=1  | oracle 0.1557 ; median_nosybil +0.0145[+0.0072,+0.0219] ; normclip_nosybil +0.0185[+0.0153,+0.0216] ; foolsgold_nosybil -0.0465[-0.0649,-0.0282]
+diverse   c=3  | oracle 0.1557 ; median_nosybil +0.0145[+0.0072,+0.0219] ; normclip_nosybil +0.0185[+0.0153,+0.0216] ; foolsgold_nosybil -0.0465[-0.0649,-0.0282]
+diverse   c=6  | oracle 0.1557 ; median_nosybil +0.0145[+0.0072,+0.0219] ; normclip_nosybil +0.0185[+0.0153,+0.0216] ; foolsgold_nosybil -0.0465[-0.0649,-0.0282]
+diverse   c=10 | oracle 0.1557 ; median_nosybil +0.0145[+0.0072,+0.0219] ; normclip_nosybil +0.0185[+0.0153,+0.0216] ; foolsgold_nosybil -0.0465[-0.0649,-0.0282]
+
+===== AMAZON COMBINATIONS (ep=200; paired diff) =====
+identical c=1 
+    TA-MAIM+median mean 0.1702 | minus TA-MAIM +0.0145[+0.0072,+0.0219] | minus median +0.0009[-0.0014,+0.0032]
+    TA-MAIM+normclip mean 0.1741 | minus TA-MAIM +0.0185[+0.0153,+0.0216] | minus normclip -0.0122[-0.0232,-0.0011]
+identical c=3 
+    TA-MAIM+median mean 0.1702 | minus TA-MAIM +0.0145[+0.0072,+0.0219] | minus median +0.0075[+0.0026,+0.0124]
+    TA-MAIM+normclip mean 0.1741 | minus TA-MAIM +0.0185[+0.0153,+0.0216] | minus normclip +0.0120[+0.0012,+0.0227]
+identical c=6 
+    TA-MAIM+median mean 0.1702 | minus TA-MAIM +0.0145[+0.0072,+0.0219] | minus median +0.0092[-0.0024,+0.0208]
+    TA-MAIM+normclip mean 0.1741 | minus TA-MAIM +0.0185[+0.0153,+0.0216] | minus normclip +0.0232[+0.0093,+0.0371]
+identical c=10
+    TA-MAIM+median mean 0.1702 | minus TA-MAIM +0.0145[+0.0072,+0.0219] | minus median +0.0185[+0.0060,+0.0310]
+    TA-MAIM+normclip mean 0.1741 | minus TA-MAIM +0.0185[+0.0153,+0.0216] | minus normclip +0.0379[+0.0211,+0.0547]
+diverse   c=1 
+    TA-MAIM+median mean 0.1702 | minus TA-MAIM +0.0145[+0.0072,+0.0219] | minus median -0.0024[-0.0090,+0.0042]
+    TA-MAIM+normclip mean 0.1741 | minus TA-MAIM +0.0185[+0.0153,+0.0216] | minus normclip -0.0001[-0.0199,+0.0197]
+diverse   c=3 
+    TA-MAIM+median mean 0.1702 | minus TA-MAIM +0.0145[+0.0072,+0.0219] | minus median +0.0022[-0.0090,+0.0135]
+    TA-MAIM+normclip mean 0.1741 | minus TA-MAIM +0.0185[+0.0153,+0.0216] | minus normclip +0.0083[-0.0115,+0.0282]
+diverse   c=6 
+    TA-MAIM+median mean 0.1702 | minus TA-MAIM +0.0145[+0.0072,+0.0219] | minus median +0.0055[-0.0119,+0.0228]
+    TA-MAIM+normclip mean 0.1741 | minus TA-MAIM +0.0185[+0.0153,+0.0216] | minus normclip +0.0144[-0.0031,+0.0319]
+diverse   c=10
+    TA-MAIM+median mean 0.1702 | minus TA-MAIM +0.0145[+0.0072,+0.0219] | minus median +0.0097[-0.0077,+0.0270]
+    TA-MAIM+normclip mean 0.1741 | minus TA-MAIM +0.0185[+0.0153,+0.0216] | minus normclip +0.0181[+0.0005,+0.0357]

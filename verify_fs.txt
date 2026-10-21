@@ -1,0 +1,11 @@
+static   TA-MAIM 30.0/0.00 | Q 30.0/0.20 | Beta 30.0/0.00 | S&C 0.0/0.60 | Struct 30.0/4.00 | Audit 0.0/0.00
+collude  TA-MAIM 30.0/0.20 | Q 30.0/0.00 | Beta 30.0/0.00 | S&C 30.0/1.00 | Struct 30.0/4.00 | Audit 30.0/0.00
+qmatch   TA-MAIM 30.0/0.20 | Q 0.0/0.00 | Beta 0.0/0.00 | S&C 30.0/0.80 | Struct 30.0/4.00 | Audit 30.0/0.00
+band1    TA-MAIM 4.4/0.00 | Q 30.0/0.20 | Beta 30.0/0.00 | S&C 0.0/1.00 | Struct 30.0/4.00 | Audit 0.0/0.00
+band2    TA-MAIM 0.0/0.00 | Q 30.0/0.20 | Beta 30.0/0.00 | S&C 0.0/1.20 | Struct 30.0/4.00 | Audit 0.0/0.00
+band3    TA-MAIM 0.0/0.00 | Q 0.0/0.20 | Beta 0.0/0.00 | S&C 0.0/1.20 | Struct 30.0/4.00 | Audit 0.0/0.00
+band4    TA-MAIM 0.0/0.00 | Q 0.0/0.20 | Beta 0.0/0.00 | S&C 0.0/1.20 | Struct 30.0/4.00 | Audit 0.0/0.00
+camou    TA-MAIM 30.0/0.00 | Q 30.0/0.00 | Beta 30.0/0.00 | S&C 25.0/0.80 | Struct 30.0/4.00 | Audit 7.2/0.00 <-- paper 7.0/0.00
+bc10     TA-MAIM 30.0/0.40 | Q 0.0/0.00 | Beta 0.0/0.00 | S&C 30.0/1.20 | Struct 30.0/3.80 | Audit 30.0/0.20
+bc20     TA-MAIM 30.0/16.80 | Q 0.0/0.00 | Beta 0.0/0.00 | S&C 30.0/18.40 | Struct 30.0/23.00 | Audit 30.0/15.20
+MISMATCHES: 1
